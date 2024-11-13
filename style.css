@@ -28,18 +28,26 @@
 
 
 /* HEADER */
-.header {
+header {
     height: 100px;
-    width: 100%;
     padding: 0px 56px;
-    background: var(--primary-color);
+    margin-bottom: 24px;
 
     position: sticky;
     top: 0px;
     z-index: 100;
+}
+
+.header {
+    height: 100%;
+    background: var(--primary-color);
 
     display: flex;
     align-items: center;
+}
+
+.underline {
+    border: 0.5px solid var(--secondary-color);
 }
 
 /* header - title */
@@ -76,7 +84,7 @@ a.header__menu__checked {
 }
 /* header - menu - HOVER */
 .header__menu:hover 
-.header__menu__checked {
+.header__menu__checked { 
     color: var(--secondary-color);
 }
 
@@ -87,12 +95,6 @@ a.header__menu__checked {
 }
 
 /* SECTION 1 */
-.underline {
-    width: 100%;
-    height: 1px;
-    margin-bottom: 20px;
-    background: var(--secondary-color);
-}
 
 .section1 {
     padding: 0px 100px;
