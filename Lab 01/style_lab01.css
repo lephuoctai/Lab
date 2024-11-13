@@ -28,7 +28,7 @@
     --linearPrimary-lab01-color: linear-gradient(180deg, #C7F4F7 0.03%, #D1F4F6 30.21%, #E5F4F5 85.42%, #37D6F8 96.5%, #00CCF9 100%);
 
     --primary02-lab01-color: #31AA5219;
-    --linearPrimary02-lab01-color: linear-gradient(180deg, #FBCB00 100%, #BF9A00 100%);
+    --linearPrimary02-lab01-color: linear-gradient(180deg, #FBCB00 10%, #BF9A00 100%);
 }
 
 * {
@@ -384,7 +384,7 @@ a.header__menu__checked {
     text-align: center;
 }
 
-.Ac input::-webkit-inner-spin-button, .Ac input::-webkit-outer-spin-button {
+input::-webkit-inner-spin-button, .Ac input::-webkit-outer-spin-button {
     -webkit-appearance: none;
 }
 
@@ -458,6 +458,8 @@ a.header__menu__checked {
     margin-top: 40px;
     background: rgb(185, 28, 28);
     border: none;
+    cursor: pointer;
+
 
     font-size: 16px;
     font-weight: 600;
@@ -521,4 +523,318 @@ a.header__menu__checked {
 .supScript__login .Gg {
     border: 1px solid #378af0;
     background: #fff;
+}
+
+/* 1_e */
+.Ae {
+    padding: 0px 20px;
+    background: var(--primary02-lab01-color);
+
+    display: flex;
+    flex-direction: column;
+}
+
+.Ae .section1__midBar__list__item__title {
+    margin: 50px;
+    margin-bottom: 70px;
+
+    font-size: 32px;
+    font-weight: 900;
+    text-align: center;
+}
+
+.Ae form {
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 10px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.Ae form input{
+    padding: 15px 20px;
+    background: #ddd;
+    border: none;
+}
+
+.Ae .getPass {
+    padding-right: 20px;
+    background: #ddd;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.Ae .getPass input {
+    flex: 1;
+}
+
+.Ae .getPass i {
+    font-size: 32px;
+    font-weight: 400;
+}
+
+form input:focus {
+    outline: none;
+}
+
+.Ae form input::placeholder {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--secondary-lab01-color);
+}
+
+.Ae form button {
+    padding: 10px;
+    margin-top: 30px;
+    background: rgb(185, 28, 28);
+    border: none;
+    cursor: pointer;
+
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+/* 2_a */
+.Af{
+    padding: 0px 20px;
+    background: var(--linearPrimary02-lab01-color);
+
+    display: flex;
+    flex-direction: column;
+}
+
+.Af .section1__midBar__list__item__title{
+    margin: 70px 0px 70px 20px;
+
+    font-size: 32px;
+    font-weight: 900;
+    text-align: left;
+}
+
+.Af form {
+    width: 100%;
+    padding-bottom: 10px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.Af form .getInput{
+    padding: 0px 20px;
+    background: #dddddd50;
+    border: 1px solid var(--primary-color);
+
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Af form input{
+    padding: 20px;
+    background: transparent;
+    border: none;
+    flex: 1;
+}
+
+.Af .getPass {
+    padding-right: 20px;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.Af i {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+form input:focus {
+    outline: none;
+}
+
+.Af form input::placeholder {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--secondary-lab01-color);
+}
+
+.Af form button {
+    padding: 10px;
+    margin-top: 50px;
+    background-color: var(--secondary-lab01-color);
+    border: none;
+    cursor: pointer;
+
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.Af .section1__midBar__list__item__create {
+    margin: 20px 0px;
+
+    font-size: 20px;
+    font-weight: 800;
+    text-align: center;
+    color: var(--secondary-lab01-color);
+}
+
+/* XMEye */
+.XMEye {
+    padding: 30px 27px 34px;
+    background: var(--primary-color);
+
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.XMEye .section1__midBar__list__item__imgInner {
+    width: 140px;
+    height: 140px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.XMEye form {
+    width: 100%;
+    height: fit-content;
+
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.XMEye form .inputBox {
+    width: 100%;
+    height: 40px;
+    border-bottom: 1px solid #ccc;
+
+
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+/* ICON */
+.XMEye form .inputBox__icon {
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+
+    position: relative;
+    z-index: 100;
+
+    display: flex;
+}
+.XMEye form .inputBox__icon .cricle1 {
+    width: 30px;
+    height: 30px;
+    background: var(--primary-lab01-color);
+    clip-path: circle(50% at 50% 0%);
+
+    position: absolute;
+}
+.XMEye form .inputBox__icon .cricle11 {
+    width: 30px;
+    height: 30px;
+    background: var(--primary-color);
+    clip-path: circle(30% at 50% 4%);
+
+    position: absolute;
+}
+.XMEye form .inputBox__icon .cricle2 {
+    width: 30px;
+    height: 30px;
+    background: var(--primary-lab01-color);
+    clip-path: circle(100% at 50% 150%);
+
+    position: absolute;
+}
+.XMEye form .inputBox__icon .cricle21 {
+    width: 30px;
+    height: 30px;
+    background: var(--primary-color);
+    clip-path: circle(50% at 50% 0%);
+
+    position: absolute;
+}
+
+/* ICON 2 */
+.XMEye form .inputBox__icon {
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+
+    position: relative;
+    z-index: 100;
+
+    display: flex;
+}
+
+.XMEye form .inputBox__icon .shape1 {
+    width: 30px;
+    height: 30px;
+    background: var(--primary-lab01-color);
+    clip-path: circle(38% at 50% 38%);
+
+    position: absolute;
+}
+.XMEye form .inputBox__icon .shape11 {
+    width: 30px;
+    height: 30px;
+    background: var(--primary-color);
+    clip-path: circle(30.4% at 50% 38%);
+
+    position: absolute;
+}
+.XMEye form .inputBox__icon .shape2 {
+    width: 30px;
+    height: 30px;
+    background: var(--primary-lab01-color);
+    clip-path: polygon(0 40%, 100% 40%, 100% 100%, 0% 100%);
+
+    position: absolute;
+}
+.XMEye form .inputBox__icon .shape21 {
+    width: 30px;
+    height: 30px;
+    background: var(--primary-color);
+    clip-path: polygon(4% 44%, 96% 44%, 96% 96%, 4% 96%);
+
+    position: absolute;
+}
+.XMEye form .inputBox__icon .shape3 {
+    width: 30px;
+    height: 30px;
+    background: var(--primary-lab01-color);
+    clip-path: polygon(45% 70%, 55% 70%, 55% 90%, 45% 90%);
+
+    position: absolute;
+}
+
+.XMEye form .inputBox input {
+    height: 100%;
+    margin-left: 15px;
+    border: none;
+
+    flex: 1;
+}
+
+.XMEye form .inputBox input::placeholder {
+    font-size: 14px;
+    font-weight: 400;
+    color: #ccc;
+}
+
+.XMEye form .inputBox input:focus {
+    outline: none;
 }
