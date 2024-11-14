@@ -29,6 +29,8 @@
 
     --primary02-lab01-color: #31AA5219;
     --linearPrimary02-lab01-color: linear-gradient(180deg, #FBCB00 10%, #BF9A00 100%);
+
+    --accent-XMEye-color: #386FFC;
 }
 
 * {

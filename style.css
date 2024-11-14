@@ -44,6 +44,7 @@ header {
 
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .underline {
@@ -52,17 +53,22 @@ header {
 
 /* header - title */
 .header__title {
-    width: 350px;
-    font-size: 32px;
+    min-width: 350px;
+
+    font-size: 20px;
+    font-weight: 800;
     letter-spacing: 4px;
+
+    transition: 0.2s ease;
 }
 
 /* header - menu */
 .header__menu {
     height: 100%;
-    margin-left: 30vw;
+    width: 50%;
+    min-width: 400px;
+    max-width: 800px;
 
-    flex: 1;
     display: flex;
     align-items: center;
 }
