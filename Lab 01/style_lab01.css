@@ -66,6 +66,7 @@ header {
 
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .underline {
@@ -74,9 +75,10 @@ header {
 
 /* header - title */
 .header__title {
-    width: 350px;
+    min-width: 350px;
 
     font-size: 20px;
+    font-weight: 800;
     letter-spacing: 4px;
 
     transition: 0.2s ease;
@@ -85,9 +87,10 @@ header {
 /* header - menu */
 .header__menu {
     height: 100%;
-    margin-left: 30vw;
+    width: 50%;
+    min-width: 400px;
+    max-width: 800px;
 
-    flex: 1;
     display: flex;
     align-items: start;
 }
@@ -692,6 +695,7 @@ form input:focus {
 .XMEye {
     padding: 30px 27px 34px;
     background: var(--primary-color);
+    border: 1px solid #ccc;
 
     display: flex;
     flex-direction: column;
@@ -704,7 +708,7 @@ form input:focus {
 
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-self: center;
 }
 
 .XMEye form {
@@ -719,7 +723,7 @@ form input:focus {
 .XMEye form .inputBox {
     width: 100%;
     height: 40px;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 2px solid #ccc;
 
 
     display: flex;
@@ -740,8 +744,8 @@ form input:focus {
 .XMEye form .inputBox__icon .cricle1 {
     width: 30px;
     height: 30px;
-    background: var(--primary-lab01-color);
-    clip-path: circle(50% at 50% 0%);
+    background: var(--accent-XMEye-color);
+    clip-path: circle(25% at 50% 25%);
 
     position: absolute;
 }
@@ -749,15 +753,15 @@ form input:focus {
     width: 30px;
     height: 30px;
     background: var(--primary-color);
-    clip-path: circle(30% at 50% 4%);
+    clip-path: circle(20% at 50% 25%);
 
     position: absolute;
 }
 .XMEye form .inputBox__icon .cricle2 {
     width: 30px;
     height: 30px;
-    background: var(--primary-lab01-color);
-    clip-path: circle(100% at 50% 150%);
+    background: var(--accent-XMEye-color);
+    clip-path: circle(50% at 50% 100%);
 
     position: absolute;
 }
@@ -765,9 +769,18 @@ form input:focus {
     width: 30px;
     height: 30px;
     background: var(--primary-color);
-    clip-path: circle(50% at 50% 0%);
+    clip-path: circle(45% at 50% 100%);
 
     position: absolute;
+}
+.XMEye form .inputBox__icon .shape22 {
+    width: 30px;
+    height: 30px;
+    background: var(--accent-XMEye-color);
+    clip-path: polygon(0% 94%, 100% 94%, 100% 100%, 0% 100%);
+
+    position: absolute;
+    bottom: 0px;
 }
 
 /* ICON 2 */
@@ -785,7 +798,7 @@ form input:focus {
 .XMEye form .inputBox__icon .shape1 {
     width: 30px;
     height: 30px;
-    background: var(--primary-lab01-color);
+    background: var(--accent-XMEye-color);
     clip-path: circle(38% at 50% 38%);
 
     position: absolute;
@@ -801,7 +814,7 @@ form input:focus {
 .XMEye form .inputBox__icon .shape2 {
     width: 30px;
     height: 30px;
-    background: var(--primary-lab01-color);
+    background: var(--accent-XMEye-color);
     clip-path: polygon(0 40%, 100% 40%, 100% 100%, 0% 100%);
 
     position: absolute;
@@ -817,7 +830,7 @@ form input:focus {
 .XMEye form .inputBox__icon .shape3 {
     width: 30px;
     height: 30px;
-    background: var(--primary-lab01-color);
+    background: var(--accent-XMEye-color);
     clip-path: polygon(45% 70%, 55% 70%, 55% 90%, 45% 90%);
 
     position: absolute;
@@ -839,4 +852,46 @@ form input:focus {
 
 .XMEye form .inputBox input:focus {
     outline: none;
+}
+
+.XMEye form button {
+    height: 40px;
+    background: var(--accent-XMEye-color);
+    border: none;
+    border-radius: 5px;
+
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.XMEye .section1__midBar__list__item__secondary {
+    font-weight: 500;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.XMEye .section1__midBar__list__item__otherMethods {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.XMEye .pack {
+    width: 74px;
+    height: 74px;
+    background: #3A579C;
+    border-radius: 12px;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.XMEye .pack .packFb {
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
 }
