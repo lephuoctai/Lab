@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Baumans&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+@keyframes header {
+    to {
+        height: 30px;
+    }
+}
+
+:root {
+    /* variable */
+    --color-status: var(--deadline-status);
+
+    /* color */
+    --primary-color: #fff;
+    --secondary-color: #263238;
+    --secondary-color-light: #E1F5FE;
+    --accent-color: #FFC107;
+
+    /* status */
+    --pass-status: #5eff63;
+    --deadline-status: #FFC107;
+    --kick-status: #ff9189;
+
+    /* color lab01 */
+    --primary-lab01-color: #00CCF9;
+    --secondary-lab01-color: #000000;
+    --accent-lab01-color: #E3C000;
+    --linearPrimary-lab01-color: linear-gradient(180deg, #C7F4F7 0.03%, #D1F4F6 30.21%, #E5F4F5 85.42%, #37D6F8 96.5%, #00CCF9 100%);
+
+    --primary02-lab01-color: #31AA5219;
+    --linearPrimary02-lab01-color: linear-gradient(180deg, #FBCB00 10%, #BF9A00 100%);
+
+    --accent-XMEye-color: #386FFC;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--secondary-lab01-color);
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Ad */
+.Ad
+{
+    width: 100%;
+    height: 100%;
+    padding: 0px 60px;
+    background: var(--linearPrimary-lab01-color);
+
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 120px;
+}
+
+.Ad__logo {
+    padding: 50px;
+    margin: 300px 0px 0px;
+
+    font-size: 200px;
+    font-weight: 700;
+}
+
+.Ad__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;;
+    gap: 100px;
+}
+.Ad__content__title {
+    width: 100%;
+
+    text-align: center;
+    font-size: 5rem;
+}
+.Ad__content__text {
+    font-size: 2.5rem;
+}
+
+/* form */
+.Ad__form {
+    width: 100%;
+    margin-top: 50px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 150px;
+}
+
+.Ad__inputBox__fill {
+    width: fit-content;
+    display: flex;
+}
+.Ad__inputBox__fill input {
+    width: 120px;
+    height: 120px;
+    background: transparent;
+    border-width: 3px;
+
+    font-size: 100px;
+    font-weight: 600;
+    text-align: center;
+}
+.Ad__inputBox__fill input::placeholder {
+    color: var(--secondary-lab01-color);
+}
+
+.Ad__buttonStyle {
+    width: 100%;
+    height: 140px;
+    background: var(--accent-lab01-color);
+
+    font-size: 50px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* controll bar */
+.controll {
+    height: 100px;
+    width: 100%;
+    background: #26323880;
+
+    font-size: 64px;
+
+    position: sticky;
+    bottom: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.controll .button {
+    height: 100%;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
