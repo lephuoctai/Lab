@@ -1,56 +1,22 @@
-const style = document.querySelector('#style');
-const pickChan = document.querySelectorAll('[name = "a"]');
-const pickLe = document.querySelectorAll('[name = "b"]');
-
-Dtime = [,'22H00', '21H00', '00H00']
-Dline = [,'14/11/2024','16/11/2024', '00/00/0000']
-Dstatus = [,'completed', 'warning', 'kick']
-
-console.log(pickChan);
-
-function chan() {
-
-    pickChan.forEach(item => {
-        item.classList.remove('TocBien');
-    }
-    )
-    pickLe.forEach(item => {
-        item.classList.add('TocBien');
-    }
-    )
-}
-
-function le() {
-    pickLe.forEach(item => {
-        item.classList.remove('TocBien');
-    }
-    )
-    pickChan.forEach(item => {
-        item.classList.add('TocBien');
-    }
-    )
-}
-
-function alla() {
-    [...pickChan, ...pickLe].forEach(item => {
-        item.classList.remove('TocBien');
-    })
-}
+Dtime = [, '22H00', '21H00', '00H00'];
+Dline = [, '14/11/2024', '16/11/2024', '00/00/0000'];
+statusBoard = ['warning', 'completed']; // 0, 1
+Dstatus = [, 1, 0, 0]
 
 // Lab
-
-for (let i = 1; i < Dline.length; i++) {
+for (let i = 1; i < Dtime.length; i++) {
     const Ditem = document.querySelector('.section1__content__list');
 
-    let j = 1;
-    if(i < 10) {
-        j = "0" + i;
-    } else {
-        j = i;
-    }
+    let j = String(i).padStart(2, '0');
+
+    // set status
+    if (Dstatus[i]) {
+        document.querySelector(`.section1__item${i}`).style.setProperty('--color-status', '#5eff63');
+    };
+
 
     Ditem.innerHTML += `
-        <a class="section1__content__list__item " href="/Lab ${j}/index.html">
+        <a class="section1__content__list__item section1__item${i}" href="/Lab ${j}/index.html">
             <div class="section1__content__list__item__status"> status</div>
             <div class="section1__content__list__item__title">
                 <p>LAB</p>
@@ -70,3 +36,4 @@ for (let i = 1; i < Dline.length; i++) {
         </a>
     `
 }
+
