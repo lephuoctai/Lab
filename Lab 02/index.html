@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="screen01">
+            <div class="subScript VT ">A premium online store for sporter and their stylish choice</div>
+            <div class="logo">
+                <img src="./Lab02_photos/bike1.png" alt="">
+            </div>
+            <div class="title">POWER BIKE <br>SHOP</div>
+            <button onclick="openScreen('2')" class="VT">Get Started</button>
+        </div>
+        <div class="screen02">
+            <div class="title">
+                The world's Best Bike
+            </div>
+            <ul class="filter">
+                <li onclick="showTag(this)" name="all" class="checked">
+                    All
+                </li>
+                <li onclick="showTag(this)" name="road">
+                    Roadbike
+                </li>
+                <li onclick="showTag(this)" name="mountain">
+                    Mountain
+                </li>
+            </ul>
+            <ul class="list">
+                <!-- comTo -->
+            </ul>
+        </div>
+        <div class="screen03">
+            <!-- openModal -->
+        </div>
+    </div>
+    <script src="./main.js"></script>
+</body>
+
+</html>

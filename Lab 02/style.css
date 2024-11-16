@@ -1,0 +1,363 @@
+@import url(https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=VT323&display=swap);
+
+@keyframes screen01 {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: "ubuntu" ,sans-serif;
+    text-decoration: none;
+    color: #000;
+    list-style: none;
+
+    scroll-behavior: smooth;
+
+    animation: screen01 1s ease-in-out;
+}
+body {
+    background: #F9F7F6;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.VT {
+    font-family: "VT323";
+}
+
+.container {
+    width: 375px;
+    height: 812px;
+
+    display: flex;
+    justify-content: center;
+
+    position: relative;
+}
+/* screen 1 */
+.screen01 {
+    width: 100%;
+    height: 100vh;
+    max-height: 100%;
+
+    padding: 60px 8px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5vh;
+
+    position: absolute;
+
+}
+
+.screen01 .subScript {
+    font-size: 24px;
+    font-weight: 550;
+    text-align: center;
+}
+
+.screen01 .logo {
+    width: 340px;
+    height: 340px;
+    background: #e9414120;
+    border-radius: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.screen01 .logo img {
+    width: 70%;
+    height: 80%;
+    object-fit: contain;
+}
+
+.screen01 .title {
+    font-size: 25px;
+    font-weight: 750;
+    text-align: center;
+}
+
+.screen01 button {
+    width: 340px;
+    height: 60px;
+    background: #e94141;
+    border: none;
+    border-radius: 50px;
+
+    font-size: 30px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: #fff;
+}
+
+/* screen 2 */
+.screen02 {
+    width: 100%;
+    height: 100vh;
+    padding: 30px 8px 0px;
+    overflow-y: scroll;
+
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 4vh;
+
+    position: relative;
+}
+
+.screen02 ul.filter {
+    width: 100%;
+    height: 30px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.screen02 ul.filter li {
+    width: 100px;
+    height: 30px;
+    border: 2px solid #E9414170;
+    border-radius: 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 18px;
+    font-weight: 450;
+    color: #00000050;
+}
+
+.screen02 ul.filter li.checked {
+    border: 2px solid #E94141;
+    color: #E94141;
+}
+
+.screen02 ul.list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+
+.screen02 ul.list li {
+    width: 160px;
+    height: 220px;
+    background: #F7BA8325;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+
+.screen02 .title {
+    width: 100%;
+    font-size: 24px;
+    font-weight: 800;
+    color: #e94141;
+}
+
+.screen02 .list .content {
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.screen02 .list li i { 
+    font-size: 20px;;
+
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+
+.screen02 .list li i:nth-of-type(1) {
+    font-size: 20px;
+    color: #00000020;
+}
+
+.screen02 .list .content__img {
+    width: 120px;
+    height: 120px;
+}
+
+.screen02 .list .content__name {
+    font-size: 18px;
+    opacity: 0.6;
+    font-weight: 700;
+}
+
+.screen02 .list .content__price {
+    font-family: Voltaire;
+    font-size: 20px;
+    color: #F7BA83;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.screen02 .content__price__value {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+/* screen 3 */
+.screen03{
+    width: 100%;
+    height: 100vh;
+    max-height: 100%;
+    padding: 20px 8px 0px;
+
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 4vh;
+
+    position: relative;
+}
+
+.screen03 .imgInner {
+    width: 100%;
+    aspect-ratio: 1/1.1;
+    max-height: 350px;
+    background: #E941411A;
+    border-radius: 8px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.screen03 .imgInner img {
+    width: 70%;
+    height: 80%;
+    margin-top: 25px;
+    object-fit: fill;
+}
+
+.screen03__content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+/*  */
+.screen03__content__name {
+    font-family: "voltaire", monospace;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.screen03__content__price {
+    display: flex;
+
+    font-size: 25px;
+    font-weight: 400;
+    gap: 20px;
+}
+
+.screen03__content__price__off {
+    color: #00000090;
+}
+
+.screen03__content__price__value {
+    text-decoration: line-through;
+}
+/*  */
+.screen03__content__description {
+    margin-left: 3px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+.screen03__content p {
+    font-size: 20px;
+    font-weight: 400;
+    color: #00000090;
+}
+/*  */
+.screen03__content__button {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.screen03__content__cta {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.screen03__content__button .favourited {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.screen03 .screen03__content__button i { 
+    font-size: 32px;;
+    color: #000000;
+}
+
+.screen03__content__button button {
+    height: 48px;
+    background: #E94141;
+    border: none;
+    border-radius: 50px;
+
+    font-family: "voltaire", monospace;
+    font-size: 32px;
+    font-weight: 500;
+    color: #fff;
+
+    flex: 1;
+}
+/*  */
+.hiden {
+    display: none;
+}
+
+button.back {
+    width: fit-content;
+    margin-top: 10px;
+    background: transparent;
+
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #1f1f97;
+}
+
