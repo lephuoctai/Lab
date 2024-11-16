@@ -342,7 +342,7 @@ body {
 }
 
 .screen03__content__button button {
-    aspect-ratio: 6/1;
+    height: 70px;
     background: #E94141;
     border: none;
     border-radius: 50px;
