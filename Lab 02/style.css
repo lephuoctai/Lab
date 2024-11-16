@@ -97,7 +97,7 @@ body {
 
 .screen01 button {
     width: 100%;
-    height: calc(70px + 3vh);
+    aspect-ratio: 5.5/1;
     margin-top: 30px;
     background: #e94141;
     border: none;
@@ -316,7 +316,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 10px;
 }
 
 .screen03__content__cta {
@@ -328,7 +327,7 @@ body {
 
 .screen03__content__button .favourited {
     width: 50px;
-    height: 50px;
+    margin-right: 10px;
     border-radius: 50%;
 
     display: flex;
@@ -338,12 +337,12 @@ body {
 
 .screen03 .screen03__content__button i { 
     cursor: pointer;
-    font-size: 32px;;
+    font-size: 36px;;
     color: #000000;
 }
 
 .screen03__content__button button {
-    height: 48px;
+    aspect-ratio: 6/1;
     background: #E94141;
     border: none;
     border-radius: 50px;
