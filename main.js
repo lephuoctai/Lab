@@ -10,9 +10,9 @@ for (let i = 1; i < Dtime.length; i++) {
     let j = String(i).padStart(2, '0');
 
     // set status
-    if (Dstatus[i]) {
-        document.querySelector(`.section1__item${i}`).style.setProperty('--color-status', '#5eff63');
-    };
+    // if (Dstatus[i]) {
+    //     document.querySelector(`.section1__item${i}`).style.setProperty('--color-status', '#5eff63');
+    // };
 
 
     Ditem.innerHTML += `
