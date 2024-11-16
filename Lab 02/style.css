@@ -39,9 +39,9 @@ body {
 }
 
 .container {
-    width: calc(380px + 5vw);
+    width: calc(380px + 4vw);
     height: 812px;
-    margin: 0px 5px;
+    margin: 0px 10px;
 
     display: flex;
     justify-content: center;
@@ -85,7 +85,7 @@ body {
 .screen01 .logo img {
     width: 80%;
     height: 90%;
-    margin-top: 50px;
+    margin-top: 40px;
     object-fit: contain;
 }
 
