@@ -3,7 +3,9 @@ content__name = [, 'Pinarello', 'Pina Mountai', 'Pina Bike', 'Pinarello', 'Pinar
 content__price__value = [, '1800', '1700', '1500', '1900', '2700', '1750'];
 
 function openScreen(toScreen) {
-    document.querySelector(".screen0" + (toScreen - 1)).style.display = 'none';
+    for (let i = 1; i < 3; i++) {
+        document.querySelector(".screen0" + i).style.display = 'none';
+    }
     document.querySelector(".screen0" + toScreen).style.display = 'flex';
 }
 function backScreen(toScreen) {
@@ -40,11 +42,8 @@ function openModal(toScreen, index) {
                     <div class="favourited">
                         <i class="fa-regular fa-heart"></i>
                     </div>
-                    <button>Add to cart</button>
+                    <button onclick = "backScreen(2)">Add to cart</button>
                 </div>
-                <button onclick="backScreen(2)" class="back">
-                    back to store
-                </button>
             </div>
         </div>
     `
@@ -56,7 +55,7 @@ for (let i = 1; i < nameType.length; i++) {
     const listItem = document.querySelector('.list');
 
     listItem.innerHTML += `
-                <li onclick="openModal(2,'${i}')" name="${nameType[i]}">
+                <li onclick="openModal('2','${i}')" name="${nameType[i]}">
                     <div class="favourited">
                         <i class="fa-solid fa-heart"></i>
                         <i class="fa-regular fa-heart"></i>
@@ -72,7 +71,7 @@ for (let i = 1; i < nameType.length; i++) {
     `
 }
 
-//
+//filter
 function showTag(element) {
     ID = element.getAttribute('name');
 
