@@ -192,12 +192,18 @@ body {
     gap: 1vh;
 }
 
-.screen02 .list li i { 
-    font-size: 20px;;
-
+.screen02 .favourited {
     position: absolute;
     top: 15px;
     left: 15px;
+
+}
+
+.screen02 .list li i { 
+    font-size: 20px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
 }
 
 .screen02 .list li i:nth-of-type(1) {

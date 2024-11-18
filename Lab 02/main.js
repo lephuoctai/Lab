@@ -2,6 +2,43 @@ nameType = [, 'mountain', 'mountain', 'road', 'road', 'road', 'mountain'];
 content__name = [, 'Pinarello', 'Pina Mountai', 'Pina Bike', 'Pinarello', 'Pinarello', 'Pinarello'];
 content__price__value = [, '1800', '1700', '1500', '1900', '2700', '1750'];
 
+const data = [
+    {
+        name: "mountain",
+        product: "Pinarello",
+        price: 1800,
+    },
+    {
+        name: "mountain",
+        product: "Pina Mountai",
+        price: 1700,
+    },
+    {
+        name: "road",
+        product: "Pina Bike",
+        price: 1500,
+    },
+    {
+        name: "road",
+        product: "Pinarello",
+        price: 1900,
+    },
+    {
+        name: "road",
+        product: "Pinarello",
+        price: 2700,
+    },
+    {   
+        name: "mountain",
+        product: "Pinarello",
+        price: 1750,
+    }
+];
+
+
+
+
+
 function openScreen(toScreen) {
     for (let i = 1; i < 3; i++) {
         document.querySelector(".screen0" + i).style.display = 'none';
@@ -69,6 +106,7 @@ for (let i = 1; i < nameType.length; i++) {
                     </div>
                 </li>
     `
+
 }
 
 //filter
@@ -76,27 +114,27 @@ function showTag(element) {
     ID = element.getAttribute('name');
 
     document.querySelectorAll('.list li').forEach(item => {
-        item.style.display = 'flex';
+        item.style.display = 'none';
     });
+    if (ID === 'mountain') {
+        document.querySelector('.list li[name="mountain"]').classList.add('check')
+        document.querySelectorAll('.list li[name="mountain"').forEach(item => {
+            item.style.display = 'flex';
+        });
+    }
+    else if (ID === 'road') {
+        document.querySelectorAll('.list li[name="road"]').forEach(item => {
+            item.style.display = 'flex';
+        });
+    }
+    else {
+        document.querySelectorAll('.list li').forEach(item => {
+            item.style.display = 'flex';
+        });
+    }
     document.querySelectorAll('.filter li').forEach(item => {
         item.classList.remove('checked');
     });
     document.querySelector(`.filter li[name = "${ID}"]`).classList.add('checked');
-
-    if (ID === 'mountain') {
-        document.querySelector('.list li[name="mountain"]').classList.add('check')
-        document.querySelectorAll('.list li[name="road"').forEach(item => {
-            item.style.display = 'none';
-        });
-    }
-    else if (ID === 'road') {
-        document.querySelectorAll('.list li[name="mountain"]').forEach(item => {
-            item.style.display = 'none';
-        });
-    }
-    else {
-
-    }
-
 
 }
