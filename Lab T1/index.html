@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Web Chủ</title>
+    <style>
+        iframe {
+            width: 100%;
+            height: 90vh; /* Chiều cao của iframe */
+            border: 1px solid #000; /* Khung viền */
+        }
+        .error-message {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Nhúng Trang Web với Reload Khi Lỗi</h1>
+    <div class="error-message" id="errorMessage" style="display: none;">
+        Trang nhúng gặp sự cố, đang thử tải lại...
+    </div>
+    <iframe id="iframe" src="https://lms.iuh.edu.vn/" frameborder="0"></iframe>
+
+    <script>
+        const iframe = document.getElementById("iframe");
+        const errorMessage = document.getElementById("errorMessage");
+        const TIMEOUT = 5000; // Thời gian timeout (ms)
+
+        // Hàm reload iframe
+        function reloadIframe() {
+            errorMessage.style.display = "block"; // Hiển thị thông báo lỗi
+            iframe.src = iframe.src; // Reload lại trang nhúng
+        }
+
+        // Kiểm tra trạng thái iframe
+        function checkIframe() {
+            let iframeLoaded = false;
+            const timer = setTimeout(() => {
+                if (!iframeLoaded) {
+                    reloadIframe(); // Reload nếu quá thời gian
+                }
+            }, TIMEOUT);
+
+            // Lắng nghe sự kiện load thành công
+            iframe.onload = () => {
+                iframeLoaded = true;
+                clearTimeout(timer);
+                errorMessage.style.display = "none"; // Ẩn thông báo lỗi
+            };
+
+            // Lắng nghe lỗi
+            iframe.onerror = () => {
+                clearTimeout(timer);
+                reloadIframe();
+            };
+        }
+
+        // Chạy kiểm tra mỗi khi iframe được tải
+        checkIframe();
+        
+        // Reload lại mỗi 10 giây nếu cần
+        setInterval(checkIframe, 10000);
+    </script>
+</body>
+</html>

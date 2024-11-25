@@ -88,7 +88,7 @@ function openModal(toScreen, index) {
 
 // Screen 02
 
-for (let i = 1; i < nameType.length; i++) {
+for (let i = 1; i <= data.length; i++) {
     const listItem = document.querySelector('.list');
 
     listItem.innerHTML += `
