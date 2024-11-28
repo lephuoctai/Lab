@@ -70,7 +70,7 @@ const item = data.map((item) => {
     return `
         <li class="section2__list__item">
             <img src="./photos/dogs/dog${item.order}.jpg" alt="" class="item__img">
-            <div class="item__content">
+            <div class="item__content"> 
                 <div class="item__content__name">
                     <h5>${item.code} - ${item.name}</h5>
                 </div>

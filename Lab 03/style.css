@@ -4,8 +4,8 @@
     /* base color */
     --light-color: #FFFFFF;
     --dark-color: #242B33;
-    --darkBlue900-color: #003459;
-    --darkBlue700-color: #002A48;
+    --darkBlue900-color: #002A48;
+    --darkBlue700-color: #003459;
     --lightBlue700-color: #00A7E7;
     --gray900-color: #242B33;
     --gray600-color: #99A2A5;
@@ -33,7 +33,6 @@
     list-style: none;
 }
 body {
-    height: 100%;
     overflow-x: hidden;
 }
 
@@ -61,11 +60,11 @@ p {
 
 /* Goble style */
 button {
-    width: 440px;
-    height: 140px;
+    width: 400px;
+    height: 120px;
     padding: 12px 38px;
     background: transparent;
-    border: 3px solid var(--darkBlue900-color);
+    border: 3px solid var(--darkBlue700-color);
     border-radius: 100px;
 
     display: flex;
@@ -148,8 +147,11 @@ button i {
 
 /* body */
 .section__container {
+    height: 100%;
     display: flex;
     flex-direction: column;
+
+    z-index: 100;
 }
 
 /* section1 */
@@ -168,14 +170,14 @@ button i {
     gap: 5rem;
 }
 .section1__button {
-    width: 100%;
     display: flex;
     justify-content: flex-start;
-    gap: 3rem;
+    gap: 2rem;
 }
 .section1__buttonR,
-.section1__buttonR h4 {
-    background: var(--darkBlue900-color);
+.section1__buttonR h5 {
+    background: var(--darkBlue700-color);
+    letter-spacing: 2px;
     color: var(--light-color);
 }
 .section1__imgInner,
@@ -251,3 +253,71 @@ button.section2__list__more {
 }
 
 /* section3 */
+.section3 {
+    width: 100%;
+    height: 1500px;
+    padding: 160px calc(16px + 3vw) 0;
+    background: var(--darkBlue700-color);
+    border-radius: 32px;
+    overflow: hidden;
+
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+    z-index: -2;
+}
+
+.section3__content {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+.section3__content__title h4 {
+    margin: 16px 0;
+    font-size: 56px;
+    font-weight: 400;
+}
+
+.section3__button {
+    margin: 64px 0 ;
+    display: flex;
+    justify-content: space-between;
+}
+
+.section3__imgInner{
+    position: absolute;
+    bottom: 0;
+}
+.section3__imgInner img {
+    width: 120%;
+    margin-left: -30px;
+    object-fit: cover;
+}
+/* section3 shape */
+.section3__background .shape1 {
+    width: 1200px;
+    aspect-ratio: 1/1;
+    border-radius: 100px;
+    background: var(--brownYellow400-color);
+
+    position: absolute;
+    top: -400px;
+    left: -120px;
+    z-index: -1;
+    rotate: 11deg;
+}
+.section3__background .shape2 {
+    width: 1500px;
+    aspect-ratio: 1/1;
+    border-radius: 100px;
+    background: var(--darkBlue900-color);
+
+    position: absolute;
+    bottom: -1200px;
+    right: -200px;
+    z-index: -1;
+    rotate: 28deg;
+}

@@ -11,6 +11,15 @@
     --gray600-color: #99A2A5;
     --brownYellow400-color: #FCEED5;
     --brownYellow600-color: #F7DBA7;
+    /* Base value */
+    /* Percent value*/
+    --100-percent: 100%;
+    --80-percent: 80%;
+    --60-percent: 60%;
+    --40-percent: 40%;
+    --20-percent: 20%;
+
+    /* Numv */
 
     /* token color */
     --primary-color: var(--brownYellow400-color);
