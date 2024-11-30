@@ -37,11 +37,20 @@ const dataLab = [
 ];
 
 const Ditem = document.querySelector('.section1__content__list');
-document.querySelector('header').innerHTML += `
-    <style>
-        
-    </style>
-`;
+// document.querySelector('header').innerHTML += `
+//     <style>
+//     </style>
+// `;
+
+const demo = dataLab.map(
+    (item) => {
+        return `
+            <h1> Hello ${item.lab} </h1>
+        `
+    }
+);
+
+document.querySelector('.section1__content__list').innerHTML = demo.join('');
 
 const cards = dataLab.map((item) => {
     let j = String(item.lab).padStart(2, '0');

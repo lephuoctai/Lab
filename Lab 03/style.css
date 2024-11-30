@@ -77,25 +77,26 @@ button i {
 }
 
 .container {
-    max-width: calc(880px + 10vw);
+    width: 100vw;
+    max-width: calc(880px + 12vw);
     
     display: flex;
     flex-direction: column;
-    justify-self: center;
 }
 /* header */
 .header {
     padding: 5rem calc(16px + 3vw) 16px;
-    background: var(--primary-color);
 
     display: flex;
     flex-direction: column;
     gap: 30px;
 }
+
 .header__statusBar {
     width: 100%;
     padding: 16px 28px 12px;
-    background: var(--primary-color);
+    margin-top: -56px;
+    background: #F7DBA760;
 
     display: flex;
     justify-content: space-between;
@@ -133,7 +134,6 @@ button i {
     display: flex;
     justify-content: space-between;
 }
-
 .header__menu i,
 .header__menu img {
     height: 70px;
@@ -152,18 +152,111 @@ button i {
     flex-direction: column;
 
     z-index: 100;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    z-index: -1;
 }
 
 /* section1 */
+.section1__background {
+    width: 100%;
+    height: 100%;
+    
+    position: absolute;
+    top: -60px;
+    left: 0px;
+    z-index: -1;
+}
+.section1__background .shape1,
+.section1__background .shape2,
+.section1__background .shape3,
+.section1__background .shape4 
+{
+    width: 1400px;
+    aspect-ratio: 1/1;
+    background: var(--secondary-color);
+    border-radius: 100px;
+
+    position: absolute;
+    z-index: -2;
+}
+.section1__background .shapeD1,
+.section1__background .shapeD2{
+    width: 100px;
+    aspect-ratio: 1/1;
+    background: var(--darkBlue900-color);
+    border-radius: 100px;
+
+    position: absolute;
+    z-index: -1;
+}
+
+.section1__background .shape1 {
+    top: -1300px;
+    left: -500px;
+    z-index: -1;
+    rotate: 20deg; 
+}
+.section1__background .shapeD1 {
+    width: 25px;
+    aspect-ratio: 1/1;
+    background: var(--darkBlue900-color);
+    border-radius: 30%;
+    rotate: -20deg;
+
+    top: 360px;
+    right: calc(390px - 5vw);
+}
+.section1__background .shape2  {
+    width: 30px;
+    aspect-ratio: 1/1;
+    background: var(--brownYellow600-color);
+    border-radius: 30%;
+    rotate: -10deg;
+
+    top: 350px;
+    right: calc(380px - 5vw);
+}
+.section1__background .shape3 {
+    width: 40px;
+    aspect-ratio: 1/1;
+    background: var(--brownYellow600-color);
+    border-radius: 30%;
+    rotate: -20deg;
+
+    top: 280px;
+    right: calc(220px - 4vw);
+}
+.section1__background .shape4 {
+    rotate: -56deg;
+    bottom: -920px;
+    left: 120px;
+    z-index: 1;
+}
+.section1__background .shapeD2 {
+    width: 1400px;
+    bottom: -920px;
+    left: 20px;
+    rotate: -80deg;
+
+}
+/*  */
 .section1 {
     padding-top: 128px;
     padding: 0 calc(16px + 3vw);
     background: var(--primary-color);
     border-radius: 0 0 32px 32px;
+    overflow: hidden;
 
     display: flex;
     flex-direction: column;
+
+    position: relative;
+    z-index: -1;
 }
+
 .section1__content {
     display: flex;
     flex-direction: column;
@@ -213,6 +306,7 @@ button i {
     width: 430px;
     height: 680px;
     padding: 16px;
+    margin: auto;
     border-radius: 16px;
     box-shadow: 0px 4px 28px -2px #00000014;
 
@@ -243,7 +337,6 @@ button i {
     font-weight: 700;
     color: var(--dark-color);
 }
-
 button.section2__list__more {
     width: 100%;
     margin-top: 16px;
@@ -254,7 +347,7 @@ button.section2__list__more {
 
 /* section3 */
 .section3 {
-    width: 100%;
+    width: 95%;
     height: 1500px;
     padding: 160px calc(16px + 3vw) 0;
     background: var(--darkBlue700-color);
@@ -304,10 +397,10 @@ button.section2__list__more {
     background: var(--brownYellow400-color);
 
     position: absolute;
-    top: -400px;
-    left: -120px;
+    top: -380px;
+    left: -180px;
     z-index: -1;
-    rotate: 11deg;
+    rotate: 15deg;
 }
 .section3__background .shape2 {
     width: 1500px;

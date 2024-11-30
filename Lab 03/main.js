@@ -64,6 +64,7 @@ const data = [
         price: '7.900.000'
     }
 ]
+
 const item = data.map((item) => {
     let genderShow = (item.gender)? 'Đực' : 'Cái';
 
