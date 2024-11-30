@@ -34,6 +34,8 @@
 }
 body {
     overflow-x: hidden;
+    position: relative;
+    z-index: -10;
 }
 
 /* font size */
@@ -45,13 +47,18 @@ h2 {
     font-size: 48px;
     font-weight: 600;
 }
+h3 {
+    font-size: 16px;
+    font-weight: 400;
+}
 h4 {
     font-size: 42px;
     font-weight: 400;
 }
 h5 {
     font-size: 32px;
-    font-weight: 500;
+    font-weight: 700;
+    color: var(--dark-color);
 }
 p {
     font-size: 28px;
@@ -82,6 +89,8 @@ button i {
     
     display: flex;
     flex-direction: column;
+    position: relative;
+    z-index: -10;
 }
 /* header */
 .header {
@@ -247,7 +256,7 @@ button i {
     padding-top: 128px;
     padding: 0 calc(16px + 3vw);
     background: var(--primary-color);
-    border-radius: 0 0 32px 32px;
+    border-radius: 0 0 40px 40px;
     overflow: hidden;
 
     display: flex;
@@ -321,10 +330,6 @@ button i {
     display: flex;
     flex-direction: column;
     gap: 16px;
-}
-.section2__list .item__content h5 {
-    font-weight: 700;
-    color: var(--dark-color);
 }
 .section2 .item__content__gender,
 .item__content__age {
@@ -413,4 +418,165 @@ button.section2__list__more {
     right: -200px;
     z-index: -1;
     rotate: 28deg;
+}
+
+/* section4 */
+.section4 {
+    width: 100%;
+    padding: 100px calc(16px + 3vw) 0;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.section4__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 24px;
+}
+.section4__list__item {
+    width: 100%;
+    height: 1000px;
+    padding: 24px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 28px -2px #00000014;
+
+    display: flex;
+    flex-direction: column;
+}
+.section4__list__item__imgInner img {
+    width: 100%;
+    object-fit: fill;
+    border-radius: 20px;
+}
+
+.section4__list__item__content {
+    padding-top: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.section4__list__item__content__tag,
+.section4__list__item__content__tag h3 {
+    width: fit-content;
+    padding: 6px 12px;
+    background: var(--lightBlue700-color);
+    border-radius: 30px;
+
+    font-size: 24px;
+    color: var(--light-color);
+}
+.section4__list__item__content h5 {
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--dark-color);
+}
+.section4__list__item__content p {
+    font-size: 36px;
+    font-weight: 400;
+    color: var(--dark-color);
+}
+
+/* section5 */
+.section5 {
+    width: 100%;
+    padding: 100px calc(16px + 3vw) 0;
+    margin-top: 100px;
+    background: var(--brownYellow400-color);
+    border-radius: 40px 40px 0 0;
+}
+
+.section5 form {
+    padding: 36px;
+    background: var(--darkBlue700-color);
+    border-radius: 40px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+.section5__form__title h2 {
+    font-weight: 400;
+    color: var(--light-color);
+}
+.section5__form__box {
+    padding: 24px;
+    background: var(--light-color);
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+.section5__form__box__input {
+    padding: 38px 56px 28px;
+    background: var(--light-color);
+    border-radius: 20px;
+
+    font-size: 32px;
+}
+.section5__form__box__register {
+    width: 100%;
+    padding: 38px 56px 28px;
+    background: var(--darkBlue700-color);
+    border-radius: 20px;
+
+    color: var(--light-color);
+}
+.section5__form__box__register h4 {
+    font-size: 36px;
+    font-weight: 400;
+    color: var(--light-color);
+}
+
+.section5__menu {
+    width: 100%;
+    padding: 96px 0;
+    border-bottom: 1px solid var(--dark-color);
+
+    display: flex;
+    flex-direction: column;
+    gap: 44px;
+}
+ul.section5__menu__page,
+ul.section5__menu__contact {
+    display: flex;
+    justify-content: center;
+    gap: 96px;
+}
+li.section5__menu__page__item h4 {
+    font-size: 32px;
+    color: var(--dark-color);
+}
+li.section5__menu__contact__item i {
+    font-size: 56px;
+}
+
+.section5__footer {
+    padding: 100px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.section5__footer__logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.section5__footer__logo img {
+    width: 60%;
+}
+.section5__footer__content {
+    margin: 120px 0 32px;
+    display: flex;
+    gap: 48px;
+}
+.section5__footer__supscript {
+    opacity: 0.8;
+
+    font-size: 16px;
+    font-weight: 200;
+    color: var(--supscript-color);
+    text-align: center;
 }
