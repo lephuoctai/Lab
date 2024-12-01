@@ -3,7 +3,7 @@ Dline = [, '14/11/2024', '16/11/2024', '00/00/0000'];
 statusBoard = ['warning', 'completed']; 
 Dstatus = [, 1, 0, 0]
 
-const dataLab = [
+const dataLab = [ 
     {
         lab: 1,
         status: 1,
