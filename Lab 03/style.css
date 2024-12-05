@@ -32,6 +32,7 @@
 
     list-style: none;
 }
+
 body {
     overflow-x: hidden;
     position: relative;
@@ -43,23 +44,28 @@ h1 {
     font-size: 88px;
     font-weight: 800;
 }
+
 h2 {
     font-size: 48px;
     font-weight: 600;
 }
+
 h3 {
     font-size: 16px;
     font-weight: 400;
 }
+
 h4 {
     font-size: 42px;
     font-weight: 400;
 }
+
 h5 {
     font-size: 32px;
     font-weight: 700;
     color: var(--dark-color);
 }
+
 p {
     font-size: 28px;
     font-weight: 500;
@@ -79,6 +85,7 @@ button {
     align-items: center;
     gap: 20px;
 }
+
 button i {
     font-size: 45px;
 }
@@ -86,12 +93,13 @@ button i {
 .container {
     width: 100vw;
     max-width: calc(880px + 12vw);
-    
+
     display: flex;
     flex-direction: column;
     position: relative;
     z-index: -10;
 }
+
 /* header */
 .header {
     padding: 5rem calc(16px + 3vw) 16px;
@@ -115,19 +123,23 @@ button i {
     top: 0px;
     z-index: 100;
 }
+
 .header__statusBar__leftBar {
     font-size: 24px;
     font-weight: 500;
 }
+
 .header__statusBar__rightBar {
     display: flex;
     align-items: center;
     gap: 8px;
 }
+
 .header__statusBar img {
     height: 16px;
     object-fit: contain;
 }
+
 .header__statusBar__notch {
     width: calc(260px + 10vw);
     height: 50px;
@@ -139,10 +151,11 @@ button i {
     left: calc(50% - 130px - 5vw);
 }
 
-.header__menu{
+.header__menu {
     display: flex;
     justify-content: space-between;
 }
+
 .header__menu i,
 .header__menu img {
     height: 70px;
@@ -172,17 +185,17 @@ button i {
 .section1__background {
     width: 100%;
     height: 100%;
-    
+
     position: absolute;
     top: -60px;
     left: 0px;
     z-index: -1;
 }
+
 .section1__background .shape1,
 .section1__background .shape2,
 .section1__background .shape3,
-.section1__background .shape4 
-{
+.section1__background .shape4 {
     width: 1400px;
     aspect-ratio: 1/1;
     background: var(--secondary-color);
@@ -191,8 +204,9 @@ button i {
     position: absolute;
     z-index: -2;
 }
+
 .section1__background .shapeD1,
-.section1__background .shapeD2{
+.section1__background .shapeD2 {
     width: 100px;
     aspect-ratio: 1/1;
     background: var(--darkBlue900-color);
@@ -206,8 +220,9 @@ button i {
     top: -1300px;
     left: -500px;
     z-index: -1;
-    rotate: 20deg; 
+    rotate: 20deg;
 }
+
 .section1__background .shapeD1 {
     width: 25px;
     aspect-ratio: 1/1;
@@ -218,7 +233,8 @@ button i {
     top: 360px;
     right: calc(390px - 5vw);
 }
-.section1__background .shape2  {
+
+.section1__background .shape2 {
     width: 30px;
     aspect-ratio: 1/1;
     background: var(--brownYellow600-color);
@@ -228,6 +244,7 @@ button i {
     top: 350px;
     right: calc(380px - 5vw);
 }
+
 .section1__background .shape3 {
     width: 40px;
     aspect-ratio: 1/1;
@@ -238,12 +255,14 @@ button i {
     top: 280px;
     right: calc(220px - 4vw);
 }
+
 .section1__background .shape4 {
     rotate: -56deg;
     bottom: -920px;
     left: 120px;
     z-index: 1;
 }
+
 .section1__background .shapeD2 {
     width: 1400px;
     bottom: -920px;
@@ -251,6 +270,7 @@ button i {
     rotate: -80deg;
 
 }
+
 /*  */
 .section1 {
     padding-top: 128px;
@@ -271,17 +291,20 @@ button i {
     flex-direction: column;
     gap: 5rem;
 }
+
 .section1__button {
     display: flex;
     justify-content: flex-start;
     gap: 2rem;
 }
+
 .section1__buttonR,
 .section1__buttonR h5 {
     background: var(--darkBlue700-color);
     letter-spacing: 2px;
     color: var(--light-color);
 }
+
 .section1__imgInner,
 .section1__imgInner img {
     width: 100%;
@@ -297,7 +320,8 @@ button i {
     flex-direction: column;
     gap: 32px;
 }
-.section2__title h4{
+
+.section2__title h4 {
     font-size: 48px;
     font-weight: 800;
 }
@@ -311,6 +335,7 @@ button i {
     gap: 24px;
 
 }
+
 .section2__list__item {
     width: 430px;
     height: 680px;
@@ -320,28 +345,33 @@ button i {
     box-shadow: 0px 4px 28px -2px #00000014;
 
 }
+
 .section2__list__item img {
     width: 100%;
     border-radius: 16px;
     object-fit: contain;
 }
+
 .section2__list .item__content {
     padding: 16px 0;
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
+
 .section2 .item__content__gender,
 .item__content__age {
     color: var(--supscript-color);
     font-size: 24px;
 
 }
+
 .section2__list__item b {
     font-size: 30px;
     font-weight: 700;
     color: var(--dark-color);
 }
+
 button.section2__list__more {
     width: 100%;
     margin-top: 16px;
@@ -373,6 +403,7 @@ button.section2__list__more {
     flex-direction: column;
     gap: 32px;
 }
+
 .section3__content__title h4 {
     margin: 16px 0;
     font-size: 56px;
@@ -380,20 +411,22 @@ button.section2__list__more {
 }
 
 .section3__button {
-    margin: 64px 0 ;
+    margin: 64px 0;
     display: flex;
     justify-content: space-between;
 }
 
-.section3__imgInner{
+.section3__imgInner {
     position: absolute;
     bottom: 0;
 }
+
 .section3__imgInner img {
     width: 120%;
     margin-left: -30px;
     object-fit: cover;
 }
+
 /* section3 shape */
 .section3__background .shape1 {
     width: 1200px;
@@ -407,6 +440,7 @@ button.section2__list__more {
     z-index: -1;
     rotate: 15deg;
 }
+
 .section3__background .shape2 {
     width: 1500px;
     aspect-ratio: 1/1;
@@ -435,6 +469,7 @@ button.section2__list__more {
     justify-content: space-between;
     gap: 24px;
 }
+
 .section4__list__item {
     width: 100%;
     height: 1000px;
@@ -445,6 +480,7 @@ button.section2__list__more {
     display: flex;
     flex-direction: column;
 }
+
 .section4__list__item__imgInner img {
     width: 100%;
     object-fit: fill;
@@ -457,6 +493,7 @@ button.section2__list__more {
     flex-direction: column;
     gap: 16px;
 }
+
 .section4__list__item__content__tag,
 .section4__list__item__content__tag h3 {
     width: fit-content;
@@ -467,11 +504,13 @@ button.section2__list__more {
     font-size: 24px;
     color: var(--light-color);
 }
+
 .section4__list__item__content h5 {
     font-size: 48px;
     font-weight: 700;
     color: var(--dark-color);
 }
+
 .section4__list__item__content p {
     font-size: 36px;
     font-weight: 400;
@@ -496,10 +535,12 @@ button.section2__list__more {
     flex-direction: column;
     gap: 36px;
 }
+
 .section5__form__title h2 {
     font-weight: 400;
     color: var(--light-color);
 }
+
 .section5__form__box {
     padding: 24px;
     background: var(--light-color);
@@ -509,6 +550,7 @@ button.section2__list__more {
     flex-direction: column;
     gap: 32px;
 }
+
 .section5__form__box__input {
     padding: 38px 56px 28px;
     background: var(--light-color);
@@ -516,6 +558,7 @@ button.section2__list__more {
 
     font-size: 32px;
 }
+
 .section5__form__box__register {
     width: 100%;
     padding: 38px 56px 28px;
@@ -524,6 +567,7 @@ button.section2__list__more {
 
     color: var(--light-color);
 }
+
 .section5__form__box__register h4 {
     font-size: 36px;
     font-weight: 400;
@@ -539,16 +583,19 @@ button.section2__list__more {
     flex-direction: column;
     gap: 44px;
 }
+
 ul.section5__menu__page,
 ul.section5__menu__contact {
     display: flex;
     justify-content: center;
     gap: 96px;
 }
+
 li.section5__menu__page__item h4 {
     font-size: 32px;
     color: var(--dark-color);
 }
+
 li.section5__menu__contact__item i {
     font-size: 56px;
 }
@@ -559,19 +606,23 @@ li.section5__menu__contact__item i {
     flex-direction: column;
     align-items: center;
 }
+
 .section5__footer__logo {
     width: 100%;
     display: flex;
     justify-content: center;
 }
+
 .section5__footer__logo img {
     width: 60%;
 }
+
 .section5__footer__content {
     margin: 120px 0 32px;
     display: flex;
     gap: 48px;
 }
+
 .section5__footer__supscript {
     opacity: 0.8;
 

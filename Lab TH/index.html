@@ -7,13 +7,65 @@
 </head>
 
 <body>
+    <header>
+        <div class="header__contaniner">
+            <img src="data:image/svg+xml;charset=utf-8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDI4LjIuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9Ik1DQ0JfTG9nb19QcmltYXJ5IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiCgkgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMzAwIDUxIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAzMDAgNTE7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4KCS5zdDB7ZmlsbDojM0QzOTM4O30KCS5zdDF7ZmlsbDojRDBDNUMwO30KPC9zdHlsZT4KPGc+Cgk8cGF0aCBkPSJNMjkzLjIsMTguNWw1LjQtOC45bC0zLTkuNkg5MC44bC0xLDdMODgsMEg0MC4zbC0xLjYsNi42aC00bC0wLjksMy42TDI4LjQsMEgxMi45TDEsMzhsOS40LDEzTDI2LDUxbDEuOS03LjJoNi4zbDQuMiw3LjIKCQloNDcuOWwxLjEtOC4zbDIuNyw4LjNoMTYwLjJsNi41LTEzLjRoNS45bDUuNC0xMC43bDUuOCwyNC4xSDI5MGw4LjktMTNMMjkzLjIsMTguNXogTTE1NC44LDI3LjVsMC00LjVoMTMuOGwwLjEsNC41SDE1NC44eiIvPgoJPHBvbHlnb24gY2xhc3M9InN0MCIgcG9pbnRzPSIxMS44LDQ4LjQgNCwzNy42IDE2LjcsMzcuNiAyMy45LDQ4LjQgCSIvPgoJPHBvbHlnb24gY2xhc3M9InN0MCIgcG9pbnRzPSI2My4yLDM3LjYgNTAuNSwzNy42IDU2LDQ4LjQgNjgsNDguNCAJIi8+Cgk8cG9seWdvbiBjbGFzcz0ic3QwIiBwb2ludHM9IjY3LjUsMzcuNiA3Miw0OC40IDg0LDQ4LjQgODAuMiwzNy42IAkiLz4KCTxwb2x5Z29uIGNsYXNzPSJzdDAiIHBvaW50cz0iMTA1LjYsMzcuNiAxMDguMSw0OC40IDEzNi4yLDQ4LjQgMTM1LjIsMzcuNiAJIi8+Cgk8cG9seWdvbiBjbGFzcz0ic3QwIiBwb2ludHM9IjE2OS4xLDM3LjYgMTY4LjMsNDguNCAxNDAuMiw0OC40IDEzOS40LDM3LjYgCSIvPgoJPHBvbHlnb24gY2xhc3M9InN0MCIgcG9pbnRzPSIxNzMuMywzNy42IDE4NiwzNy42IDE4NC4zLDQ4LjQgMTcyLjMsNDguNCAJIi8+Cgk8cG9seWdvbiBjbGFzcz0ic3QwIiBwb2ludHM9IjE5MC4yLDM3LjYgMTg4LjMsNDguNCAyMDAuNCw0OC40IDIwMi45LDM3LjYgCSIvPgoJPHBvbHlnb24gY2xhc3M9InN0MCIgcG9pbnRzPSIyMDcuMiwzNy42IDIwNC40LDQ4LjQgMjE2LjQsNDguNCAyMTkuOSwzNy42IAkiLz4KCTxwb2x5Z29uIGNsYXNzPSJzdDAiIHBvaW50cz0iMjI0LjEsMzcuNiAyMjAuNCw0OC40IDIzMi41LDQ4LjQgMjM2LjgsMzcuNiAJIi8+Cgk8cG9seWdvbiBjbGFzcz0ic3QwIiBwb2ludHM9IjI0MSwzNy42IDIzNi41LDQ4LjQgMjQ4LjUsNDguNCAyNTMuNywzNy42IAkiLz4KCTxwb2x5Z29uIGNsYXNzPSJzdDAiIHBvaW50cz0iMjgzLjQsMzcuNiAyNzYuNiw0OC40IDI4OC42LDQ4LjQgMjk2LjEsMzcuNiAJIi8+Cgk8cG9seWdvbiBjbGFzcz0ic3QwIiBwb2ludHM9Ijg4LjYsMzcuNiA5Mi4xLDQ4LjQgMTA0LjEsNDguNCAxMDEuMywzNy42IAkiLz4KCTxwb2x5Z29uIGNsYXNzPSJzdDAiIHBvaW50cz0iMzMuNiwzNy42IDQ2LjMsMzcuNiA1MS45LDQ4LjQgMzkuOSw0OC40IAkiLz4KCTxnPgoJCTxnPgoJCQk8cGF0aCBjbGFzcz0ic3QxIiBkPSJNMzcuMiwyM2gtNC4xbC0xLjksNy4yaC04LjNsMi03LjJoLTQuMWwtNC4yLDE0LjZINEwxNC44LDIuNmgxMS44bC0xLjksNi42aDRMMjYuOSwxNmg4LjFsMS44LTYuOGg0CgkJCQlsMS42LTYuNmgxMS44bC03LjgsMzQuOUgzMy42TDM3LjIsMjN6Ii8+CgkJCTxwYXRoIGNsYXNzPSJzdDEiIGQ9Ik01OCwyLjZoMTEuOGwtNi42LDM0LjlINTAuNUw1OCwyLjZ6Ii8+CgkJCTxwYXRoIGNsYXNzPSJzdDEiIGQ9Ik0xMDkuMSwyLjZoMjcuNWwtMC4zLDYuNmgtMTUuOWwtMC41LDYuOEgxMzZsLTAuMyw3aC0xNi40bC0wLjUsNy4yaDE2LjdsLTAuMyw3LjRoLTI5LjZMMTA5LjEsMi42eiIvPgoJCQk8cGF0aCBjbGFzcz0ic3QxIiBkPSJNMTQwLjUsMi42SDE2OGwwLjIsNi42aC0xNS45bC0wLjEsMjAuOWgxNi43bDAuMiw3LjRoLTI5LjZMMTQwLjUsMi42eiIvPgoJCQk8cGF0aCBjbGFzcz0ic3QxIiBkPSJNMTg5LjEsMjNIMTg1bDEsMTQuNmgtMTIuN2wtMS40LTM0LjlsMjcuNSwwbDEuMywxMy4zaC00bDAuMywzLjVoNC4xbDEuOCwxOC4xaC0xMi43TDE4OS4xLDIzeiBNMTg0LjEsOS4yCgkJCQlsMC40LDYuOGg0bC0wLjUtNi44SDE4NC4xeiIvPgoJCQk8cGF0aCBjbGFzcz0ic3QxIiBkPSJNMjM0LjgsMi42aDI3LjVsMS42LDYuNmgtMTUuOWwxLjQsNi44aDE2LjJsMS43LDdoLTE2LjRsMywxNC42SDI0MUwyMzQuOCwyLjZ6Ii8+CgkJCTxwYXRoIGNsYXNzPSJzdDEiIGQ9Ik0yNzUuOCw5LjJoLThsLTEuNi02LjZoMjcuNWwyLDYuNmgtOGw4LjMsMjguM2gtMTIuN0wyNzUuOCw5LjJ6Ii8+CgkJCTxwYXRoIGNsYXNzPSJzdDEiIGQ9Ik05MC4xLDI2LjVIODZsMS03LjFoLTQuMWwtMi44LDE4LjFINjcuNWw2LjMtMzQuOWgxMS44bC0xLDYuNmg0bC0xLDYuOGg0bDEuOC0xMy4zaDExLjhsLTMuOCwzNC45SDg4LjYKCQkJCUw5MC4xLDI2LjV6Ii8+CgkJPC9nPgoJCTxwYXRoIGNsYXNzPSJzdDEiIGQ9Ik0yMzAuOCwyLjZoLTI3LjVsMy44LDM0LjloMTIuN2wtMS41LTExaDQuMWwxLjYsMTFoMTIuN0wyMzAuOCwyLjZ6IE0yMjEuNiwxNS40aDJsMSw2LjRoLTIuN2wtMC4zLTIuM2gtNC4xCgkJCWwwLjMsMi4zSDIxNWwtMC44LTYuNGgybC0wLjItMS43aC00LjdsLTAuNi00LjVoNS4zbDAuNSwzLjloNEwyMjAsOS4yaDUuM2wwLjcsNC41aC00LjdMMjIxLjYsMTUuNHoiLz4KCTwvZz4KPC9nPgo8L3N2Zz4K"
+                alt="logo" class="logo">
+            <nav class="primaryNav">
+                <ul>
+                    <li>GAMES</li>
+                    <li>SHOP</li>
+                    <li>COMMUNITY</li>
+                    <li>SUPPORT</li>
+                </ul>
+            </nav>
+            <nav class="secondaryNav">
+                <ul>
+                    <li>SEARCH</li>
+                    <li>ACCOUNT</li>
+                </ul>
+            </nav>
+        </div>
+    </header>
     <div class="container">
-        <div class="section1">
-            <label for="">Họ và tên:</label>
-            <input type="text" class="StudentName" placeholder="Nhập họ và tên sinh viên">
-            <br><label for="">Mssv:</label> 
-            <input type="number" class="StudentID" placeholder="Nhập MSSV">
-            <button id="Send"> Gửi </button>
+        <div class="heroSection">
+            <div class="heroSection__imgInner">
+                <img src="./photos/hero1.png" alt="">
+            </div>
+            <div class="heroSection__content">
+                <div class="heroSection__content__inner borderTop">
+                    <h1>Block Friday is back</h1>
+                    <p>Head to the Minecraft Marketplace for great digital deals <br>of up to 75% off!</p>
+                    <div class="heroSection__content__buttonContainer">
+                        <button class="primaryButton" name="shop">SHOP NOW</button>
+                        <button class="secondaryButton">Join Server</button>
+                    </div>
+                </div>
+                <div class="heroSection__content__status">
+                    <h6 class="IPserver subTitle">IP: YourServer.net</h6>
+                    <h6 class="playerOnline subTitle">125 online</h6>
+                </div>
+                <div class="heroSection__content__background borderTop">
+                </div>
+            </div>
+        </div>
+        <div class="section2">
+            <h1 class="supperTitle">DISCOVER OUR GAMES</h1>
+            <ul class="section2__gameList list">
+                <!-- render -->
+            </ul>
+            <button class="secondaryButton">Discover more</button>
+        </div>
+        <div class="section3">
+            <div class="section3__background borderBottom">
+                <div class="shape section3__background__shape1"></div>
+                <div class="shape section3__background__shape2"></div>
+                <div class="shape section3__background__shape3"></div>
+            </div>
+            <h1 class="supperTitle">NEWS UPDATE</h1>
+            <div class="section3__newsList">
+
+            </div>
         </div>
     </div>
     <script src="./main.js">
