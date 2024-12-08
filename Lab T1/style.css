@@ -1,0 +1,22 @@
+body {
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    height: 100vh;
+}
+
+.container2::-webkit-scrollbar {
+    margin-right: 10px;
+    width: 3px;
+}
+.container2::-webkit-scrollbar-thumb {
+    background-color: rgb(255, 101, 101);
+}
+
+.red {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(255, 101, 101);
+}
