@@ -33,6 +33,12 @@ const dataLab = [
         status: 0,
         time: "00H00",
         deadline: "TRIET HOC M-L"
+    },
+    {
+        lab: "AI",
+        status: 0,
+        time: "00H00",
+        deadline: "AI Chatbot"
     }
 ];
 

@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Baumans&family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+:root {
+    /* base color */
+    --white100-color: #ffffff;
+    --white200-color: #fafafa;
+    --grey100-color: #d9d9d9;
+    --grey200-color: #a9a9a9;
+    --black100-color: #323438;
+    --black900-color: #000000;
+    --blueSky100-color: #97daff;
+    --blueSky200-color: #8ad8ff;
+    --blueSky300-color: #60c8ff;
+    --blueSky400-color: #48bdff;
+    --blueSky500-color: #3eb0fd;
+    --blueSky600-color: #3ba1ee;
+    --cyan100-color: #ace9e9;
+    --cyan200-color: #73dadc;
+    --cyan300-color: #2dcbd0;
+    --cyan400-color: #00c0c8;
+    --cyan500-color: #00b5c2;
+    --cyan600-color: #00a5b0;
+
+    /* grey200 color opacity */
+    --grey200-10-color: #a9a9a91a;
+    --grey200-20-color: #a9a9a933;
+    --grey200-40-color: #a9a9a966;
+    --grey200-60-color: #a9a9a999;
+    --grey200-80-color: #a9a9a9cc;
+    --grey200-90-color: #a9a9a9e6;
+    /* black100 color opacity */
+    --black100-10-color: #3234381a;
+    --black100-20-color: #32343833;
+    --black100-40-color: #32343866;
+    --black100-60-color: #32343899;
+    --black100-80-color: #323438cc;
+    --black100-90-color: #323438e6;
+    /* cyan300 color opacity */
+    --cyan300-10-color: #2dcbd01a;
+    --cyan300-20-color: #2dcbd033;
+    --cyan300-40-color: #2dcbd066;
+    --cyan300-60-color: #2dcbd099;
+    --cyan300-80-color: #2dcbd0cc;
+    --cyan300-90-color: #2dcbd0e6;
+
+    /* token color */
+    --primary-color: var(--white200-color);
+    --secondary-color: var(--white100-color);
+    --accent-color: var(--cyan300-color);
+
+    --bg-color: var(--white200-color);
+    --bg-modal-color: var(--white100-color);
+
+    --text-dark-color: var(--black100-color);
+    --text-light-color: var(--white100-color);
+    --supscript-color: var(--black100-60-color);
+    --placeholder-color: var(--black100-60-color);
+
+    --icon-color: var(--grey200-color);
+    --icon-nva-color: var(--black100-20-color);
+    --icon-nva-active: var(--white100-color);
+
+    /* styles */
+    --chatbox-padding: 12px 24px;
+    --chatbox-shadow: 0px 10px 80px var(--grey200-10-color);
+    --chatboxR-border-radius: 20px 20px 5px 20px;
+    --chatboxL-border-radius: 5px 20px 20px 20px;
+}
+
+/* globle */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+
+    list-style: none;
+}
+body {
+    display: flex;
+    justify-content: center;
+}
+.phone {
+    width: 375px;
+    height: 812px;
+    background: var(--bg-color);
+    border-radius: 15px;
+    border: 2px solid var(--accent-color);
+    overflow: hidden;
+
+    position: relative;
+}
+
+.modal {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 120px rgba(169, 169, 169, 0.1);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+
+/* screen 01: Onboarding 1 */
+
+/* screem 02: Chatting with Diz */
+.phone__content {
+    width: 100%;
+    height: 100%;
+
+    padding: 15px 22px 0px 25px;
+    overflow-x: hidden;
+}
+.chatboxUserList,
+.chatboxDizyList {
+    width: 100%;
+    margin: 25px 0px;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 15px;
+}
+.chatboxDizyList__message,
+.chatboxUserList__message {
+    width: fit-content;
+    max-width: 225px;
+    padding: var(--chatbox-padding);
+    background: var(--accent-color);
+    box-shadow: var(--chatbox-shadow);
+    border-radius: var(--chatboxR-border-radius);
+    overflow-wrap: break-word;
+
+    color: var(--text-light-color);
+}
+
+.chatboxDizyList {
+    align-items: flex-start;
+}
+.chatboxDizyList__message {
+    background: var(--secondary-color);
+    border-radius: var(--chatboxL-border-radius);
+
+    color: var(--text-dark-color);
+}
