@@ -299,7 +299,7 @@ pushContent('.avatarS', avatarSmall);
 // Select the element
 function selectE(className) {
     if (className.includes('.'))
-        return document.querySelector(className);
+        return document.querySelector(className); 
     else if (className.includes('#'))
         return document.querySelector(className);
     else
@@ -307,13 +307,13 @@ function selectE(className) {
 }
 // Check if the element exists
 function pushContent(selectElement, content) {
-    if (selectE(selectElement)) {
+    if (selectE(selectElement)) { 
         selectE(selectElement).innerHTML += content;
         return;
-    }
+    } 
     else {
         return console.log('pushContent: Element (' + selectElement + ') not found');
-    }
+    } 
 }
 
 // ------------------------------------------------------------------ FLOW APP STARTING
