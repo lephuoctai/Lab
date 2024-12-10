@@ -317,4 +317,4 @@ function pushContent(selectElement, content) {
 }
 
 // ------------------------------------------------------------------ FLOW APP STARTING
-document.querySelector('.phone__content').scrollIntoView(false);
+document.querySelector('.phone').scrollIntoView(false);
