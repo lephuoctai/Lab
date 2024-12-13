@@ -78,6 +78,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    border: none;
 
     font-family: 'Nunito Sans';
     font-style: normal;
@@ -89,14 +90,13 @@
 }
 
 body {
+    overflow: hidden;
     display: flex;
     justify-content: center;
-    overflow: hidden;
 }
 
 .phone {
     width: 100vw;
-    max-width: 1000px;
     height: 100vh;
     background: var(--bg-color);
     overflow-x: hidden;
@@ -115,21 +115,25 @@ body {
 }
 
 button {
-    width: 120px;
-    height: 120px;
+    width: 150px;
+    height: 150px;
 
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 /* secondary button */
-button.secondarybutton {
+button.secondaryButton {
     background: var(--accent-color);
     box-shadow: var(--button-shadow);
 }
-button.secondarybutton i {
+
+button.secondaryButton i {
+    font-size: 80px;
     color: var(--text-light-color);
 }
+
 /* button border styles */
 button.borderCricle {
     border-radius: var(--buttonCricle-border-radius);
@@ -138,6 +142,7 @@ button.borderCricle {
 button.borderSquare {
     border-radius: var(--buttonSquare-border-radius);
 }
+
 /* button icon styles */
 button i.icon {
     font-size: 56px;
@@ -149,33 +154,95 @@ button i.setting {
     color: var(--icon-color);
 }
 
+/* text styles */
+h1 {
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 64px;
+    color: var(--text-dark-color);
+}
+
+p {
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 190%;
+    color: var(--black100-60-color);
+}
+
 /* screen 01: Onboarding 1 */
 .phone__container {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
+    padding: 160px 0;
+    background: var(--bg-color);
 
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 60px;
 }
+
 .progressBar {
     width: fit-content;
-    height: 18px;
     display: flex;
     gap: 30px;
 }
+
 .progressBar li {
     width: 18px;
     height: 18px;
     border-radius: var(--buttonCricle-border-radius);
     background: var(--grey200-color);
 }
-.progressBar li.active{
-    width: 36px;
+
+.progressBar li.active {
+    width: 56px;
     background: var(--accent-color);
 }
 
-/* screem 02: Chatting with Diz */
+.logo {
+    margin-right: -10vw;
+
+    display: flex;
+    justify-content: center;
+}
+
+.logo img {
+    height: 140%;
+}
+
+.board {
+    width: 100%;
+    padding: 0 60px;
+    margin-top: 15vh;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.board__content {
+    width: 100vw;
+    padding: 120px;
+    position: absolute;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 56px;
+}
+
+.board__content button {
+    margin-top: 60px;
+}
+
+.board__background,
+.board__background img {
+    width: 100%;
+}
+
+/* screen 02: Chatting with Diz */
 .phone__content {
     width: 100%;
     height: fit-content;
