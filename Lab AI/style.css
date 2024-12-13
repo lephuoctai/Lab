@@ -70,7 +70,7 @@
 
     --button-shadow: 0px 20px 70px var(--cyan300-20-color);
     --buttonSquare-border-radius: 40px;
-    --buttonCricle-border-radius: 50%;
+    --buttonCricle-border-radius: 1000px;
 }
 
 /* globle */
@@ -91,14 +91,14 @@
 body {
     display: flex;
     justify-content: center;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 .phone {
     width: 100vw;
+    max-width: 1000px;
     height: 100vh;
     background: var(--bg-color);
-    border-radius: 30px;
     overflow-x: hidden;
 
     position: relative;
@@ -150,12 +150,35 @@ button i.setting {
 }
 
 /* screen 01: Onboarding 1 */
+.phone__container {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.progressBar {
+    width: fit-content;
+    height: 18px;
+    display: flex;
+    gap: 30px;
+}
+.progressBar li {
+    width: 18px;
+    height: 18px;
+    border-radius: var(--buttonCricle-border-radius);
+    background: var(--grey200-color);
+}
+.progressBar li.active{
+    width: 36px;
+    background: var(--accent-color);
+}
 
 /* screem 02: Chatting with Diz */
 .phone__content {
     width: 100%;
-    height: 100%;
-
+    height: fit-content;
     padding: 15px 22px 0px 25px;
 }
 

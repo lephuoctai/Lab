@@ -290,16 +290,37 @@ const avatarSmall =
         </defs>
     </svg>
 `;
+// path background
+const boardShape =
+`
+        <svg width="375" height="443" viewBox="0 0 375 443" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g filter="url(#filter0_d_303_578)">
+    <path d="M25 181.322C25 171.388 25 166.42 25.9563 162.128C28.7626 149.531 37.4788 139.063 49.3618 134.018C53.4114 132.298 58.2984 131.397 68.0723 129.593C96.6225 124.324 110.898 121.69 125.196 119.895C166.57 114.702 208.43 114.702 249.804 119.895C264.102 121.69 278.377 124.324 306.928 129.593C316.702 131.397 321.589 132.298 325.638 134.018C337.521 139.063 346.237 149.531 349.044 162.128C350 166.42 350 171.388 350 181.322V323.678C350 333.612 350 338.58 349.044 342.872C346.237 355.469 337.521 365.937 325.638 370.982C321.589 372.702 316.702 373.603 306.928 375.407C278.377 380.676 264.102 383.31 249.804 385.105C208.43 390.298 166.57 390.298 125.196 385.105C110.898 383.31 96.6225 380.676 68.0723 375.407C58.2984 373.603 53.4114 372.702 49.3618 370.982C37.4788 365.937 28.7626 355.469 25.9563 342.872C25 338.58 25 333.612 25 323.678V181.322Z" fill="white"/>
+    </g>
+    <defs>
+    <filter id="filter0_d_303_578" x="-95" y="0" width="565" height="513" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+    <feOffset dy="4"/>
+    <feGaussianBlur stdDeviation="60"/>
+    <feColorMatrix type="matrix" values="0 0 0 0 0.662745 0 0 0 0 0.662745 0 0 0 0 0.662745 0 0 0 0.1 0"/>
+    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_303_578"/>
+    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_303_578" result="shape"/>
+    </filter>
+    </defs>
+    </svg>
+`;
 
 pushContent('.avatarL', avatarLarge);
 pushContent('.avatarM', avatarMedium);
 pushContent('.avatarS', avatarSmall);
+pushContent('.boardShape', boardShape);
 
 // ------------------------------------------------------------------ FUCTIONS
 // Select the element
 function selectE(className) {
     if (className.includes('.'))
-        return document.querySelector(className); 
+        return document.querySelector(className);
     else if (className.includes('#'))
         return document.querySelector(className);
     else
@@ -307,13 +328,13 @@ function selectE(className) {
 }
 // Check if the element exists
 function pushContent(selectElement, content) {
-    if (selectE(selectElement)) { 
+    if (selectE(selectElement)) {
         selectE(selectElement).innerHTML += content;
         return;
-    } 
+    }
     else {
         return console.log('pushContent: Element (' + selectElement + ') not found');
-    } 
+    }
 }
 
 // ------------------------------------------------------------------ FLOW APP STARTING
