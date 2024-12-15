@@ -243,6 +243,44 @@ p {
 }
 
 /* screen 02: Chatting with Diz */
+.phone {
+    background: red;
+}
+.topBoard {
+    width: 100%;
+    height: 300px;
+
+    display: flex;
+    flex-direction: column;
+}
+.topBoard__buttonContainer {
+    display: flex;
+    justify-content: space-between;
+}
+.topBoard__buttonContainer button {
+    background: transparent;
+}
+.topBoard__logo {
+    padding-left: 100px;
+    margin: auto;
+    margin-top: -60px;
+}
+.topBoard__logo img {
+    width: 240px;
+}
+.topBoard__background {
+    width: 100%;
+    height: 300px;
+    margin-bottom: -300px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column-reverse;
+
+}
+.topBoard__background img {
+    width: 100%;
+}
+
 .phone__content {
     width: 100%;
     height: fit-content;
