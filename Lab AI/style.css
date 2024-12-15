@@ -61,12 +61,12 @@
     --icon-nva-active: var(--white100-color);
 
     /* styles */
-    --chatbox-padding: 24px 48px;
-    --chatbox-shadow: 0px 20px 160px var(--grey200-10-color);
-    --chatboxR-border-radius: 40px 40px 10px 40px;
-    --chatboxRmiddle-border-radius: 40px 10px 10px 40px;
-    --chatboxL-border-radius: 10px 40px 40px 40px;
-    --chatboxLmiddle-border-radius: 10px 40px 40px 10px;
+    --chatBox-padding: 24px 48px;
+    --chatBox-shadow: 0px 20px 160px var(--grey200-10-color);
+    --chatBoxR-border-radius: 40px 40px 10px 40px;
+    --chatBoxRmiddle-border-radius: 40px 10px 10px 40px;
+    --chatBoxL-border-radius: 10px 40px 40px 40px;
+    --chatBoxLmiddle-border-radius: 10px 40px 40px 10px;
 
     --button-shadow: 0px 20px 70px var(--cyan300-20-color);
     --buttonSquare-border-radius: 40px;
@@ -130,7 +130,7 @@ button.secondaryButton {
 }
 
 button.secondaryButton i {
-    font-size: 80px;
+    font-size: 56px;
     color: var(--text-light-color);
 }
 
@@ -244,51 +244,88 @@ p {
 
 /* screen 02: Chatting with Diz */
 .phone {
-    background: red;
 }
+
 .topBoard {
     width: 100%;
-    height: 300px;
+    height: 380px;
+    margin-bottom: -80px;
 
     display: flex;
     flex-direction: column;
+
+    position: sticky;
+    z-index: 100;
 }
+
+.topBoard__content {
+    width: 100%;
+}
+
 .topBoard__buttonContainer {
     display: flex;
     justify-content: space-between;
 }
+
 .topBoard__buttonContainer button {
     background: transparent;
 }
+
+.topBoard__buttonContainer button i {
+    font-size: 60px;
+}
+
+.topBoard__buttonContainer__back {
+    color: var(--black100-color);
+}
+
+.topBoard__buttonContainer__settings {
+    color: var(--grey200-color);
+}
+
 .topBoard__logo {
-    padding-left: 100px;
+    width: fit-content;
     margin: auto;
     margin-top: -60px;
 }
+
 .topBoard__logo img {
-    width: 240px;
+    width: 200px;
 }
+
 .topBoard__background {
     width: 100%;
     height: 300px;
     margin-bottom: -300px;
     overflow: hidden;
+
     display: flex;
     flex-direction: column-reverse;
-
 }
+
 .topBoard__background img {
     width: 100%;
 }
 
-.phone__content {
+/* chatBox */
+.phoneView {
     width: 100%;
-    height: fit-content;
-    padding: 15px 22px 0px 25px;
+    height: calc(100vh - 300px);
+    margin-top: -300px;
+    padding-top: 350px;
+    overflow-x: hidden;
 }
 
-.chatboxUserList,
-.chatboxDizyList {
+.chatBox {
+    width: 100%;
+    padding: 15px 22px 0px 25px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.chatBoxUserList,
+.chatBoxDizyList {
     width: 100%;
     margin: 50px 0px;
 
@@ -300,34 +337,52 @@ p {
     gap: 30px;
 }
 
-.chatboxDizyList__message,
-.chatboxUserList__message {
+.chatBoxDizyList__message,
+.chatBoxUserList__message {
     width: fit-content;
     max-width: 500px;
-    padding: var(--chatbox-padding);
+    padding: var(--chatBox-padding);
     background: var(--accent-color);
-    box-shadow: var(--chatbox-shadow);
-    border-radius: var(--chatboxRmiddle-border-radius);
+    box-shadow: var(--chatBox-shadow);
+    border-radius: var(--chatBoxRmiddle-border-radius);
     overflow-wrap: break-word;
 
     color: var(--text-light-color);
 }
 
-.chatboxUserList__message:first-child {
-    border-radius: var(--chatboxR-border-radius);
+.chatBoxUserList__message:first-child {
+    border-radius: var(--chatBoxR-border-radius);
 }
 
-.chatboxDizyList {
+.chatBoxDizyList {
     align-items: flex-start;
 }
 
-.chatboxDizyList__message {
+.chatBoxDizyList__message {
     background: var(--secondary-color);
-    border-radius: var(--chatboxLmiddle-border-radius);
+    border-radius: var(--chatBoxLmiddle-border-radius);
 
     color: var(--text-dark-color);
 }
 
-.chatboxDizyList__message:first-child {
-    border-radius: var(--chatboxL-border-radius);
+.chatBoxDizyList__message:first-child {
+    border-radius: var(--chatBoxL-border-radius);
+}
+
+/* sendBox */
+.sendBox {
+    width: 100%;
+    padding: 30px 22px 0px 25px;
+    display: flex;
+    gap: 30px;
+}
+
+.sendBox__sendButton i {
+    margin-right: 7px;
+}
+
+#inputSendBox {
+    padding: 30px 0px 31px 40px;
+    border-radius: var(--buttonSquare-border-radius);
+    flex: 1;
 }
