@@ -361,7 +361,6 @@ p {
 .chatBoxDizyList__message {
     background: var(--secondary-color);
     border-radius: var(--chatBoxLmiddle-border-radius);
-
     color: var(--text-dark-color);
 }
 

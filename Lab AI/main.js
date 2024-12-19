@@ -1,3 +1,4 @@
+
 // ------------------------------------------------------------------ FUCTIONS
 // Select the element
 function selectE(className) {
@@ -32,7 +33,7 @@ const boardProgress =
                         <h1>We Don’t Sleep</h1>
                         <p>Dizy Bot always available 24/7. Don’t worry, we are online on midnight!</p>
 
-                        <button onclick="selectE('.phone').innerHTML = chatBox" class="secondaryButton borderCricle">
+                        <button onclick="selectE('.phone').innerHTML = chatBox; document.getElementById('web-highlights-global-style-variables').remove();" class="secondaryButton borderCricle">
                             <i class="fa-solid fa-arrow-right"></i>
                         </button>
                     </div>
@@ -103,4 +104,4 @@ const chatBox =
         </div>
     `;
     
-selectE('.phone').innerHTML = boardProgress;
+// selectE('.phone').innerHTML = boardProgress;
