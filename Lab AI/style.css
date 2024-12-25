@@ -162,6 +162,12 @@ h1 {
     color: var(--text-dark-color);
 }
 
+h2 {
+    font-weight: 700;
+    font-size: 48px;
+    color: var(--text-dark-color);
+}
+
 p {
     font-weight: 500;
     font-size: 36px;
@@ -243,8 +249,7 @@ p {
 }
 
 /* screen 02: Chatting with Diz */
-.phone {
-}
+.phone {}
 
 .topBoard {
     width: 100%;
@@ -260,6 +265,7 @@ p {
 
 .topBoard__content {
     width: 100%;
+    height: 380px;
 }
 
 .topBoard__buttonContainer {
@@ -284,18 +290,20 @@ p {
 }
 
 .topBoard__logo {
-    width: fit-content;
-    margin: auto;
-    margin-top: -60px;
+    margin-left: -120px;
+
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
 }
 
 .topBoard__logo img {
-    width: 200px;
+    width: 260px;
 }
 
 .topBoard__background {
     width: 100%;
-    height: 300px;
+    height: 380px;
     margin-bottom: -300px;
     overflow: hidden;
 
@@ -384,4 +392,66 @@ p {
     padding: 30px 0px 31px 40px;
     border-radius: var(--buttonSquare-border-radius);
     flex: 1;
+}
+
+/* ChatHome */
+ul.chatHistory {
+    width: 100%;
+    padding: 60px;
+    margin-top: 60px;
+
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+.chatHistory__title {
+    width: 100%;
+}
+
+li.chatHistory__item {
+    width: 100%;
+    height: 200px;
+    padding: 50px;
+    background: var(--bg-modal-color);
+    border-radius: var(--buttonSquare-border-radius);
+    box-shadow: var(--chatBox-shadow);
+
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.chatHistory__item__imgInner {
+    width: 140px;
+    height: 140px;
+    padding-bottom: 30px;
+    background: var(--cyan300-20-color);
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+}
+.chatHistory__item__content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.chatHistory__item__content__review.new::before {
+    content: "• ";
+    color: var(--accent-color);
+}
+.newChat {
+    margin-left: -60px;
+
+    position: absolute;
+    bottom: 130px;
+    left: 50%;
+}
+.topBoard__buttonContainer__account {
+    color: var(--black100-color);
+
+    position: absolute;
+    right: 50px;
 }

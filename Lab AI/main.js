@@ -1,4 +1,33 @@
 
+// ------------------------------------------------------------------ Data
+const chatHistoryData = [
+    {
+        mess: "Love that, were it from?",
+        new: 1
+    },
+    {
+        mess: "Thank you Hedy!",
+        new: 0
+    },
+    {
+        mess: "Love that, were it from?",
+        new: 1
+    },
+    {
+        mess: "Love that, were it from?",
+        new: 1
+    },
+    {
+        mess: "Thank you Hedy!",
+        new: 0
+    },
+    {
+        mess: "Love that, were it from?",
+        new: 1
+    },
+
+];
+
 // ------------------------------------------------------------------ FUCTIONS
 // Select the element
 function selectE(className) {
@@ -15,8 +44,30 @@ function pushContent(selectElement, content) {
     }
 }
 
+function renderChatHistory() {
+    let i = 0;
+    const renderItem = chatHistoryData.map((item) => {
+        ++i;
+        let checkNew = item.new ? "new" : "";
+        return `
+                <li onclick="selectE('.phone').innerHTML = chatBox;" class="chatHistory__item">
+                    <div class="chatHistory__item__imgInner">
+                        <img src="./Photos/logo2.png" alt="">
+                    </div>
+                    <div class="chatHistory__item__content">
+                        <h2 class="chatHistory__item__content__name">Dizy #${i}</h2>
+                        <p class="chatHistory__item__content__review ${checkNew}">${item.mess}</p>
+                    </div>
+                </li>
+        `
+    });
+
+    selectE('.chatHistory').innerHTML += renderItem.join('') + `
+            <h2 class="chatHistory__title">Chat History</h2>
+    `;
+}
 //------------------------------------------------------------------- RENDER/DOM
-const boardProgress = 
+const boardProgress =
     `    
         <div class="phone__screen1">
             <div class="phone__container">
@@ -44,16 +95,15 @@ const boardProgress =
             </div>
         </div>
     `;
-const chatBox = 
+const chatBox =
     `
-    
         <div class="topBoard">
             <div class="topBoard__background">
                 <img src="./Photos/board__background.png" alt="">
             </div>
             <div class="topBoard__content">
                 <div class="topBoard__buttonContainer">
-                    <button onclick="selectE('.phone').innerHTML = boardProgress" class="topBoard__buttonContainer__back">
+                    <button onclick="selectE('.phone').innerHTML = chatManager;renderChatHistory()" class="topBoard__buttonContainer__back">
                         <i class="fa-solid fa-arrow-left-long"></i>
                     </button>
                     <button class="topBoard__buttonContainer__settings">
@@ -103,5 +153,30 @@ const chatBox =
             </button>
         </div>
     `;
-    
-// selectE('.phone').innerHTML = boardProgress;
+const chatManager =
+    `
+        <div class="topBoard">
+            <div class="topBoard__background">
+                <img src="./Photos/board__background.png" alt="">
+            </div>
+            <div class="topBoard__content">
+                <div class="topBoard__buttonContainer">
+                    <button  class="topBoard__buttonContainer__account">
+                        <i class="fa-regular fa-user"></i>
+                    </button>
+                </div>
+                <div class="topBoard__logo">
+                    <img src="./Photos/logo2.png" alt="">
+                </div>
+
+            </div>
+        </div>
+        <div class="phoneView">
+            <ul class="chatHistory">
+                <button class="secondaryButton borderSquare newChat">
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+            </ul>
+        </div>
+`;
+selectE('.phone').innerHTML = boardProgress;
