@@ -9,6 +9,63 @@
 
 <body>
     <div class="phone">
+        <div class="topBoard">
+            <div class="topBoard__background">
+                <img src="./Photos/board__background.png" alt="">
+            </div>
+            <div class="topBoard__content">
+                <div class="topBoard__buttonContainer">
+                    <button onclick="selectE('.phone').innerHTML = chatManager;renderChatHistory()"
+                        class="topBoard__buttonContainer__back">
+                        <i class="fa-solid fa-arrow-left-long"></i>
+                    </button>
+                    <button class="topBoard__buttonContainer__settings">
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </button>
+                </div>
+                <div class="topBoard__logo">
+                    <div class="account__avatar"></div>
+                    <div class="camera">
+                        <i class="fa-solid fa-camera"></i>
+                    </div>
+                </div>
+                <div class="phoneview">
+                    <div class="account__profile">
+                        <h1 class="account__name">Hedy Rio</h1>
+                        <h2 class="account__email">hedyrio21@gmail.com</h2>
+                    </div>
+                    <div class="chatHistory__item account__timeSent">
+                        <div class="chatHistory__item__imgInner">
+                            <img src="./Photos/logo2.png" alt="">
+                        </div>
+                        <div class="chatHistory__item__content">
+                            <p class="chatHistory__item__content__review ">Time Spent With Dizy</p>
+                            <div class="timeSent__hours">
+                                <i class="fa-regular fa-clock"></i>
+                                <h2 class="chatHistory__item__content__name">2.478 Hours</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="chatHistory account__option">
+                        <li class="chatHistory__item account__option">
+                            <div class="account__option__icon">
+                                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                            </div>
+                            <h2 class="account__option__label">Logout</h2>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </li>
+                        <li class="chatHistory__item account__option">
+                            <div class="account__option__icon">
+                                <i class="fa-solid fa-gear"></i>
+                            </div>
+                            <h2 class="account__option__label">Settings</h2>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
     </div>
 
     <script src="main.js"></script>
