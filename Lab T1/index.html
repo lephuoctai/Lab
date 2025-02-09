@@ -149,13 +149,15 @@
             </div>
         </div>
     </div>
-    <audio autoplay>
+    <!-- audio -->
+    <audio id="myaudio" autoplay>
         <source src="./src/audi.mp3" type="audio/mpeg">    
     </audio>
 
     <script>
         function openLetter() {
             document.querySelector('.envelope').classList.add('open');
+            document.getElementById('myaudio').play();
         }
 
         const envelope = document.querySelector('.envelope');
