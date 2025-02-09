@@ -1,19 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="vi">
 <head>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lephuo</title>
+    <style>
+      *{
+            padding: 0px;
+            margin: 0px;
+            overflow: none;
+      }
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        #container {
+            text-align: center;
+            justify-content: center;
+            width: 80%;
+            height: 80%;
+        }
+        #message {
+            font-size: 24px;
+            margin-bottom: 40px;
+        }
+        .button {
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+            transition: font-size 0.3s ease;
+
+        }
+        #yes {
+            background-color: green;
+            color: white;
+            border-radius: 10px;
+
+        }
+        #no {
+            background-color: red;
+            color: white;
+            border-radius: 10px;
+
+        }
+    </style>
 </head>
-
 <body>
-    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 384 512" focusable="false"
-        class="chakra-icon css-sxyqwm" aria-label="HTML" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-        <path
-            d="M0 32l34.9 395.8L191.5 480l157.6-52.2L384 32H0zm308.2 127.9H124.4l4.1 49.4h175.6l-13.6 148.4-97.9 27v.3h-1.1l-98.7-27.3-6-75.8h47.7L138 320l53.5 14.5 53.7-14.5 6-62.2H84.3L71.5 112.2h241.1l-4.4 47.7z">
-        </path>
-    </svg>
-    <!-- <script src="main.js"></script> -->
-</body>
+    <div id="container">
+        <div id="message">Đồng ý hông ?</div>
+        <button id="yes" class="button">CÓ</button>
+        <button id="no" class="button">Hông</button>
+    </div>
 
+    <script>
+        let noClickCount = 0;
+        const maxClicks = 10;
+        const yesButton = document.getElementById("yes");
+        const noButton = document.getElementById("no");
+        const message = document.getElementById("message");
+        let fontSize = 18;
+
+        noButton.addEventListener("click", function() {
+            if (noClickCount < maxClicks) {
+                fontSize *= 1.5; // Tăng kích thước font-size
+                yesButton.style.fontSize = `${fontSize}px`;
+                noClickCount++;
+            }
+            if (noClickCount === maxClicks) {
+                noButton.style.display = `none`;
+            }
+        });
+      yesButton.addEventListener("click", function() {
+            message.innerHTML = "Tớ biết cậu sẽ đồng ý mà <3";
+            message.style.fontSize = `50px`;
+            noButton.style.display = `none`;
+      });
+    </script>
+</body>
 </html>
