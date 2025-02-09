@@ -18,6 +18,12 @@ const dataLab = [
         deadline: "00/00/0000"
     },
     {
+        lab: 4,
+        status: 0,
+        time: "00H00",
+        deadline: "00/00/0000"
+    },
+    {
         lab: "T1",
         status: 0,
         time: "00H00",

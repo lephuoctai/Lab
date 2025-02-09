@@ -37,4 +37,11 @@ const gameList = dataGameList.map((item) => {
     </li>
     `;
 });
-document.querySelector(".section2__gameList").innerHTML += gameList.join("");
+const listItem = document.querySelectorAll('.section3__bottomBar__slot');
+listItem.forEach((element) => {
+    element.addEventListener('click', () => {
+        
+        document.querySelector('.checked').classList.remove('checked');
+        element.classList.add('checked');
+    });
+});

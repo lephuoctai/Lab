@@ -464,9 +464,11 @@ header {
     flex-direction: column;
     align-items: center;
 }
+
 .container::-webkit-scrollbar {
     width: 8px;
 }
+
 .container::-webkit-scrollbar-thumb {
     background: var(--mc-core-grey-3);
     border-radius: 10px;
@@ -667,5 +669,40 @@ header {
     position: absolute;
     top: 0;
     left: 0;
+}
 
+/* board */
+.section3__newsList {
+    margin: 50px 0;
+
+}
+
+.section3__bottomBar {
+    width: 300px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.section3__bottomBar__slot {
+    width: 50px;
+    height: 50px;
+    padding-left: 50px;
+    background: var(--mc-core-grey-5);
+    box-shadow: 0 4px #ffffff3d inset,
+        -4px 0 #ffffff3d inset,
+        0 -4px #0000003d inset,
+        4px 0 #0000003d inset;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    transition: all 0.3s linear;
+}
+
+.section3__bottomBar__slot.checked {
+    width: fit-content;
+    padding-right: 25px;
+    background: var(--mc-core-green-3);
 }

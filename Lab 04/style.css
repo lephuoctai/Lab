@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    font-size: 24px;
+    color: black;
+    text-decoration: none;
+    list-style: none;
+    transition: all 0.3s;
+}
+
+.app {
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+}
+img {
+    width: 400px;
+}
+.pack {
+    width: 1000px;
+    height: 600px;
+    border: 1px solid;
+
+    position: relative;
+}
+
+.item {
+    margin-top: 80px;
+    scale: 0.6;
+    opacity: 0.4;
+
+    position: absolute
+}
+
+.item1 {
+    left: calc(-60px);
+}
+
+.item3 {
+    left: calc(1000px - 340px);
+}
+
+.item2 {
+    margin-top: 0px;
+    scale: 1;
+    opacity: 1;
+    left: calc(500px - 200px);
+}
