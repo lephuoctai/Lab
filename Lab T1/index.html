@@ -129,29 +129,36 @@
         .active {
             background: tomato;
         }
+
+        /* img */
+        #letter-title {
+            position: absolute;
+            z-index: 1;
+            background-color: #ffffff90;
+        }
     </style>
 </head>
 
 <body>
     <div class="envelope" onclick="openLetter()">
         <div class="title">
-            💌 Click để mở thư 💌
+            📑 Click để mở thư 📩
         </div>
         <div id="letter">
             <div class="letter--title">
-                💖 Vé trải nghiệm Valentine siêu đỉnh nóc 💖
+                ✨ Hôm nay bạn phải có một kỷ niệm đẹp! ✨
                 <br>
                 <span class="spa"> *Thử chọn NO xem >:L</span>
             </div>
             <div class="btn--container">
-                <button id="yes" class="button">YES</button>
-                <button id="no" class="button">NO</button>
+                <button id="yes" class="button">Đúng</button>
+                <button id="no" class="button">Không</button>
             </div>
         </div>
     </div>
     <!-- audio -->
     <audio id="myaudio" autoplay loop>
-        <source src="./src/audi.mp3" type="audio/mpeg">    
+        <source src="./src/audi.mp3" type="audio/mpeg">
     </audio>
 
     <script>
@@ -189,7 +196,7 @@
 
         yesButton.addEventListener("click", function () {
             letter.innerHTML = `
-                    <div style="font-size:18px;height:90px;" id="message">💖 Tôi biết là bạn sẽ Đồng Ý mà 💖</div>
+                    <div style="font-size:18px;height:90px;" id="message">✨ Oke, Giờ hãy để tớ làm nó đẹp hơn nữa ✨</div>
                     <div class="btn-inner">
                     <div class="imgInner">
                         <img style="height:180px;" src="./src/yes.gif" alt="">
@@ -200,7 +207,7 @@
                     <div class="letter--title">
                         Đây là quà dành cho bạn
                             <br>
-                        <span style="color: tomato;"> 💖 Serect box đâyy 💖 </span>
+                        <span style="color: tomato;"> ✨ Serect box đâyy ✨ </span>
                         
                     </div>
                     <div id="list--select">
@@ -210,28 +217,96 @@
                         <div class="item active" id="4" onclick=openBox(this)>4</div>
                         <div class="item" id="5" onclick=openBox(this)>5</div>
                     </div>
-                    <span style="margin-top: 5px;font-size: 16px;">Mỗi box tương ứng là một chàng trai</span>
+                    <span style="margin-top: 5px;font-size: 16px;">Mỗi box là một fact</span>
             `;
             }, 3000);
         });
 
         // secret box
         function openBox(thisBox) {
-                letter.innerHTML = `
-                        💖 Serect Box ${thisBox.id} 💖
+            // display: none; the card that was clicked
+            letter.innerHTML = `
+                        ✨ Serect Box ${thisBox.id} ✨
                         <br>
                         <p style="color: tomato;;font-size: 18px; font-weight: 400;position: absolute; bottom: 0%">Chúc mừng bạn đã tìm thấy chàng trai may mắn</p>
                         <img style="margin-bottom: 24px;" src="./src/photo/${thisBox.id}.png" alt="">
                     `;
-            setTimeout(() => {
+            if(thisBox.id == 1) {
                 letter.innerHTML = `
-                        <div style="font-size:18px;" id="letter-title">💖 Chúc cả hai có một ngày thật tuyệt là vời 💖</div>
-                        <div class="btn-inner">
-                        <div class="imgInner">
-                            <img style="margin-top:0px;height:170px;" src="./src/waiting.gif" alt="">
-                        </div>
+                    <div style="font-size:18px;" id="letter-title"> ✨Chúng ta đã là bạn của nhau trong suốt <strong>189</strong> ngày✨</div>
+                    <div class="btn-inner">
+                    <div class="imgInner">
+                        <img style="margin-top:0px;height:170px;" src="./src/photo/${thisBox.id}.png" alt="">
+                    </div>
+                `;
+            }
+            else if(thisBox.id == 2) {
+                letter.innerHTML = `
+                    <div style="font-size:18px;" id="letter-title"> ✨Chúng ta trở thành bạn thân trong <strong>The Race</strong>, một trãi nghiệm khó quên✨</div>
+                    <div class="btn-inner">
+                    <div class="imgInner">
+                        <img style="margin-top:0px;height:170px;" src="./src/photo/${thisBox.id}.png" alt="">
+                    </div>
+                `;
+
+                }
+            else if(thisBox.id == 3) {
+                letter.innerHTML = `
+                    <div style="font-size:18px;" id="letter-title"> ✨Câu chuyện đáng nhớ nhiều kỉ niệm nhất của mình là <strong>Kì GD Quốc Phòng</strong> ✨</div>
+                    <div class="btn-inner">
+                    <div class="imgInner">
+                        <img style="margin-top:0px;height:170px;" src="./src/photo/${thisBox.id}.png" alt="">
+                    </div>
+                `;
+            }
+            else if(thisBox.id == 4) {
+                letter.innerHTML = `
+                    <div style="font-size:18px;" id="letter-title">✨ Chúng ta đã nói về <strong>bom nguyên tử</strong> trong lần đầu tiên nhắn tin :D ✨</div>
+                    <div class="btn-inner">
+                    <div class="imgInner">
+                        <img style="margin-top:0px;height:170px;" src="./src/photo/${thisBox.id}.png" alt="">
+                    </div>
+                `;
+            }
+            else {
+                letter.innerHTML = `
+                    <div style="font-size:18px;" id="letter-title"😍 Đây là trang giấy trắng, mong có thể ghi được nhiều kỉ niệm của chúng ta hơn nhé 😍</div>
+                    <div class="btn-inner">
+                    <div class="imgInner">
+                        <img style="margin-top:0px;height:170px;" src="./src/photo/${thisBox.id}.png" alt="">
+                    </div>
+                `;
+            }
+
+            setTimeout(() => {
+                // if all box is opened 
+
+                if (thisBox.id == 5) {
+                    letter.innerHTML = `
+                        <div style="font-size:18px;" id="letter-title">✨ Happy Birthday form Tai_Le to my Bestfriend ZyTR✨</div>
+                        </br>
+                        <div style="font-size:18px;" id="letter-title">"Bạn thân có thể không bên bạn mãi mãi </br>mà là người sẵn sàng lắng nghe câu chuyện của bạn"</div>
                     `;
-            },2000);
+                }
+                else {
+                    letter.innerHTML = `                                                
+                        <div class="letter--title">
+                            Đây là quà dành cho bạn
+                                <br>
+                            <span style="color: tomato;"> ✨ Serect box đâyy ✨ </span>
+                            
+                        </div>
+                        <div id="list--select">
+                            <div class="item" id="1" onclick=openBox(this)>1</div>
+                            <div class="item" id="2" onclick=openBox(this)>2</div>
+                            <div class="item" id="3" onclick=openBox(this)>3</div>
+                            <div class="item active" id="4" onclick=openBox(this)>4</div>
+                            <div class="item" id="5" onclick=openBox(this)>5</div>
+                        </div>
+                        <span style="margin-top: 5px;font-size: 16px;">Mỗi box là một fact</span>
+                    `;
+                }
+            }, 6000);
         }
 
 
